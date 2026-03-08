@@ -1,0 +1,267 @@
+<svg class="robot-icon" viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    /* ================== BODY ANIMATION (60s cycle) ================== */
+    @keyframes bodyLifeCycle {
+      /* 0-33.33%: Normal floating */
+      0%, 33.33% { transform: translateY(0px); }
+      16.67% { transform: translateY(-10px); }
+      
+      /* 33.33-38.33%: Laugh bouncing */
+      33.33% { transform: translateY(0px); }
+      34.5% { transform: translateY(-5px); }
+      35.67% { transform: translateY(0px); }
+      36.83% { transform: translateY(-5px); }
+      38.33% { transform: translateY(0px); }
+      
+      /* 38.33-55%: Normal floating */
+      46.67% { transform: translateY(-10px); }
+      55% { transform: translateY(0px); }
+      
+      /* 55-88.33%: Sleep breathing (slow) */
+      71.67% { transform: translateY(3px); }
+      88.33% { transform: translateY(0px); }
+      
+      /* 88.33-100%: Wake up */
+      100% { transform: translateY(0px); }
+    }
+
+    /* ================== REALISTIC ANTENNA ANIMATION ================== */
+    /* Spring-like wobble with decreasing amplitude - looks like real antenna physics */
+    @keyframes antennaSpring {
+      0% { transform: rotate(0deg); }
+      12.5% { transform: rotate(-8deg); }      /* Swing left */
+      15% { transform: rotate(-6deg); }        /* Bounce back slightly */
+      25% { transform: rotate(8deg); }         /* Swing right */
+      27.5% { transform: rotate(6deg); }       /* Bounce back slightly */
+      37.5% { transform: rotate(-5deg); }      /* Swing left (less) */
+      50% { transform: rotate(5deg); }         /* Swing right (less) */
+      62.5% { transform: rotate(-2deg); }      /* Swing left (minimal) */
+      75% { transform: rotate(2deg); }         /* Swing right (minimal) */
+      87.5%, 100% { transform: rotate(0deg); } /* Settle to rest */
+    }
+
+    /* Alternative: Signal pulse animation (quick twitches like receiving signals) */
+    @keyframes antennaSignal {
+      0%, 20% { transform: rotate(0deg); }
+      21.25% { transform: rotate(-3deg); }     /* Quick twitch left */
+      23.75% { transform: rotate(0deg); }
+      50% { transform: rotate(0deg); }
+      51.25% { transform: rotate(4deg); }      /* Quick twitch right */
+      53.75% { transform: rotate(0deg); }
+      87.5% { transform: rotate(0deg); }
+      88.75% { transform: rotate(-2deg); }     /* Quick twitch left */
+      91.25%, 100% { transform: rotate(0deg); }
+    }
+
+    /* ================== LEFT EYE LIFECYCLE (60s) ================== */
+    @keyframes leftEyeLifeCycle {
+      /* === NORMAL PHASE 1 (0-20s = 0-33.33%) === */
+      /* Blink 1: 0s */
+      0% { transform: scaleY(1) translateX(0); }
+      0.42% { transform: scaleY(0.1) translateX(0); }
+      0.83% { transform: scaleY(1) translateX(0); }
+      
+      /* Blink 2: 2s */
+      3.17% { transform: scaleY(1) translateX(0); }
+      3.33% { transform: scaleY(0.1) translateX(0); }
+      3.67% { transform: scaleY(1) translateX(0); }
+      
+      /* Blink 3: 4s */
+      6.5% { transform: scaleY(1) translateX(0); }
+      6.67% { transform: scaleY(0.1) translateX(0); }
+      7% { transform: scaleY(1) translateX(0); }
+      
+      /* Blink 4: 6s */
+      9.83% { transform: scaleY(1) translateX(0); }
+      10% { transform: scaleY(0.1) translateX(0); }
+      10.33% { transform: scaleY(1) translateX(0); }
+      
+      /* Blink 5: 8s */
+      13.17% { transform: scaleY(1) translateX(0); }
+      13.33% { transform: scaleY(0.1) translateX(0); }
+      13.67% { transform: scaleY(1) translateX(0); }
+      
+      /* Look side-to-side: 10-14s */
+      16.67% { transform: scaleY(1) translateX(0); }
+      18% { transform: scaleY(1) translateX(-5px); }
+      19.33% { transform: scaleY(1) translateX(-5px); }
+      20.67% { transform: scaleY(1) translateX(5px); }
+      22% { transform: scaleY(1) translateX(5px); }
+      23.33% { transform: scaleY(1) translateX(0); }
+      
+      /* Hold normal: 14-20s */
+      33.33% { transform: scaleY(1) translateX(0); }
+      
+      /* === LAUGH PHASE (20-23s = 33.33-38.33%) === */
+      33.33% { transform: scaleY(1) translateX(0); }
+      34% { transform: scaleY(0.3) translateX(0); }
+      34.67% { transform: scaleY(1) translateX(0); }
+      35.33% { transform: scaleY(0.3) translateX(0); }
+      36% { transform: scaleY(1) translateX(0); }
+      36.67% { transform: scaleY(0.3) translateX(0); }
+      37.33% { transform: scaleY(1) translateX(0); }
+      38% { transform: scaleY(0.3) translateX(0); }
+      38.33% { transform: scaleY(1) translateX(0); }
+      
+      /* === NORMAL PHASE 2 (23-33s = 38.33-55%) === */
+      /* Blink slowly twice */
+      42% { transform: scaleY(1) translateX(0); }
+      42.5% { transform: scaleY(0.1) translateX(0); }
+      43% { transform: scaleY(1) translateX(0); }
+      
+      48% { transform: scaleY(1) translateX(0); }
+      48.5% { transform: scaleY(0.1) translateX(0); }
+      49% { transform: scaleY(1) translateX(0); }
+      
+      55% { transform: scaleY(1) translateX(0); }
+      
+      /* === SLEEP PHASE (33-53s = 55-88.33%) === */
+      /* Eyes closing slowly: 33-35s */
+      55% { transform: scaleY(1) translateX(0); }
+      58.33% { transform: scaleY(0.05) translateX(0); }
+      
+      /* Fully asleep with breathing: 35-50s */
+      71.67% { transform: scaleY(0.05) translateX(0) translateY(1px); }
+      83.33% { transform: scaleY(0.05) translateX(0); }
+      
+      /* Flutter: 48s */
+      85% { transform: scaleY(0.15) translateX(0); }
+      86.67% { transform: scaleY(0.05) translateX(0); }
+      
+      /* === NORMAL PHASE 3 (53-60s = 88.33-100%) === */
+      /* Eyes opening */
+      88.33% { transform: scaleY(0.05) translateX(0); }
+      91.67% { transform: scaleY(0.5) translateX(0); }
+      95% { transform: scaleY(1) translateX(0); }
+      100% { transform: scaleY(1) translateX(0); }
+    }
+
+    /* ================== RIGHT EYE LIFECYCLE (60s) === */
+    @keyframes rightEyeLifeCycle {
+      /* Same as left eye but with wink at 17-18s */
+      0% { transform: scaleY(1) translateX(0); }
+      0.42% { transform: scaleY(0.1) translateX(0); }
+      0.83% { transform: scaleY(1) translateX(0); }
+      3.17% { transform: scaleY(1) translateX(0); }
+      3.33% { transform: scaleY(0.1) translateX(0); }
+      3.67% { transform: scaleY(1) translateX(0); }
+      6.5% { transform: scaleY(1) translateX(0); }
+      6.67% { transform: scaleY(0.1) translateX(0); }
+      7% { transform: scaleY(1) translateX(0); }
+      9.83% { transform: scaleY(1) translateX(0); }
+      10% { transform: scaleY(0.1) translateX(0); }
+      10.33% { transform: scaleY(1) translateX(0); }
+      13.17% { transform: scaleY(1) translateX(0); }
+      13.33% { transform: scaleY(0.1) translateX(0); }
+      13.67% { transform: scaleY(1) translateX(0); }
+      16.67% { transform: scaleY(1) translateX(0); }
+      18% { transform: scaleY(1) translateX(-5px); }
+      19.33% { transform: scaleY(1) translateX(-5px); }
+      20.67% { transform: scaleY(1) translateX(5px); }
+      22% { transform: scaleY(1) translateX(5px); }
+      23.33% { transform: scaleY(1) translateX(0); }
+      
+      /* WINK: 17-18s (28.33-30%) */
+      28.33% { transform: scaleY(1) translateX(0); }
+      28.5% { transform: scaleY(0.2) translateX(0); }
+      29.5% { transform: scaleY(0.2) translateX(0); }
+      30% { transform: scaleY(1) translateX(0); }
+      
+      33.33% { transform: scaleY(1) translateX(0); }
+      
+      /* LAUGH: Same as left eye */
+      34% { transform: scaleY(0.3) translateX(0); }
+      34.67% { transform: scaleY(1) translateX(0); }
+      35.33% { transform: scaleY(0.3) translateX(0); }
+      36% { transform: scaleY(1) translateX(0); }
+      36.67% { transform: scaleY(0.3) translateX(0); }
+      37.33% { transform: scaleY(1) translateX(0); }
+      38% { transform: scaleY(0.3) translateX(0); }
+      38.33% { transform: scaleY(1) translateX(0); }
+      
+      /* NORMAL 2: Same as left */
+      42% { transform: scaleY(1) translateX(0); }
+      42.5% { transform: scaleY(0.1) translateX(0); }
+      43% { transform: scaleY(1) translateX(0); }
+      48% { transform: scaleY(1) translateX(0); }
+      48.5% { transform: scaleY(0.1) translateX(0); }
+      49% { transform: scaleY(1) translateX(0); }
+      55% { transform: scaleY(1) translateX(0); }
+      
+      /* SLEEP: Same as left */
+      58.33% { transform: scaleY(0.05) translateX(0); }
+      71.67% { transform: scaleY(0.05) translateX(0) translateY(1px); }
+      83.33% { transform: scaleY(0.05) translateX(0); }
+      85% { transform: scaleY(0.15) translateX(0); }
+      86.67% { transform: scaleY(0.05) translateX(0); }
+      
+      /* WAKE: Same as left */
+      88.33% { transform: scaleY(0.05) translateX(0); }
+      91.67% { transform: scaleY(0.5) translateX(0); }
+      95% { transform: scaleY(1) translateX(0); }
+      100% { transform: scaleY(1) translateX(0); }
+    }
+
+    /* ================== APPLY ANIMATIONS ================== */
+    
+    .logo {
+      animation: bodyLifeCycle 60s ease-in-out infinite;
+    }
+
+    .antenna-top {
+      /* Choose one: antennaSpring (realistic) or antennaSignal (signal pulses) */
+      animation: antennaSpring 4s ease-in-out infinite;
+      transform-origin: 125px 75px; /* Pivot at base of antenna */
+    }
+
+    .eye-left {
+      animation: leftEyeLifeCycle 60s ease-in-out infinite;
+      transform-origin: center center;
+    }
+
+    .eye-right {
+      animation: rightEyeLifeCycle 60s ease-in-out infinite;
+      transform-origin: center center;
+    }
+  </style>
+
+  <!-- Background -->
+  <circle cx="125" cy="125" r="125" fill="#0173BC"/>
+
+  <g class="logo">
+    <!-- Antenna -->
+    <g class="antenna-top">
+      <line x1="125" y1="40" x2="125" y2="75" stroke="white" stroke-width="6" stroke-linecap="round"/>
+      <circle cx="125" cy="40" r="8" fill="white"/>
+    </g>
+
+    <!-- Head -->
+    <path d="M125 60
+      C80 60, 60 80, 60 100
+      L60 140
+      C60 160, 80 180, 110 180
+      L100 200
+      C170 180, 190 160, 190 140
+      L190 100
+      C190 80, 170 60, 125 60
+      Z"
+    fill="white"/>
+
+    <!-- Ears -->
+    <ellipse cx="60" cy="118" rx="17" ry="25" fill="white"/>
+    <ellipse cx="190" cy="118" rx="17" ry="25" fill="white"/>
+
+    <!-- Face area -->
+    <rect x="75" y="85" width="100" height="75" rx="30" ry="20" fill="#0173BC"/>
+
+    <!-- Left Eye -->
+    <g class="eye-left">
+      <ellipse cx="105" cy="123" rx="8" ry="10" fill="white"/>
+    </g>
+
+    <!-- Right Eye -->
+    <g class="eye-right">
+      <ellipse cx="145" cy="123" rx="8" ry="10" fill="white"/>
+    </g>
+  </g>
+</svg>
