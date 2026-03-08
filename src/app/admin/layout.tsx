@@ -69,6 +69,7 @@ function AdminSidebar() {
 function MainAdminLayout({ children }: { children: React.ReactNode }) {
     const { user, loading } = useAuth();
     const pathname = usePathname();
+    const router = useRouter();
 
     if (loading) {
         return (
@@ -87,7 +88,7 @@ function MainAdminLayout({ children }: { children: React.ReactNode }) {
     if (!user && pathname !== "/admin/login") {
         // Return empty while redirecting (happens in the page components usually, but a safe fallback here)
         if (typeof window !== "undefined") {
-            window.location.href = "/admin/login";
+            router.push("/admin/login");
         }
         return null;
     }
@@ -104,7 +105,7 @@ function MainAdminLayout({ children }: { children: React.ReactNode }) {
                     <button
                         onClick={async () => {
                             await signOut(auth);
-                            window.location.href = "/admin/login";
+                            router.push("/admin/login");
                         }}
                         title="Logout"
                         className="text-red-500 p-2"

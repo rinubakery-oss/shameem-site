@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
-import Image from "next/image";
 import "./globals.css";
 import dynamic from "next/dynamic";
 

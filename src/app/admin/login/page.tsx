@@ -31,8 +31,8 @@ export default function AdminLogin() {
         try {
             await signInWithEmailAndPassword(auth, email, password);
             router.push("/admin/contacts");
-        } catch (err: any) {
-            setError(err.message || "Failed to log in");
+        } catch (err: unknown) {
+            setError(err instanceof Error ? err.message : "Failed to log in");
         } finally {
             setIsLoading(false);
         }

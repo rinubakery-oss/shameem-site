@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { collection, getDocs, query, orderBy, Timestamp } from "firebase/firestore";
+import { collection, getDocs, query, Timestamp } from "firebase/firestore";
 import { db } from "@/firebase";
 
 interface ChatbotLead {
@@ -38,9 +38,9 @@ export default function LeadsPage() {
                 });
 
                 setLeads(fetchedLeads);
-            } catch (err: any) {
+            } catch (err: unknown) {
                 console.error("Error fetching leads:", err);
-                setError("Failed to load leads data. Please ensure you have permission and data exists.");
+                setError(err instanceof Error ? err.message : "Failed to load leads data. Please ensure you have permission and data exists.");
             } finally {
                 setLoading(false);
             }

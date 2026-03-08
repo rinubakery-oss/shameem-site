@@ -30,9 +30,9 @@ export default function ContactsPage() {
 
                 // Generally display newest first, since no timestamp we just reverse the array fetched.
                 setContacts(fetchedContacts.reverse());
-            } catch (err: any) {
+            } catch (err: unknown) {
                 console.error("Error fetching contacts:", err);
-                setError("Failed to load contacts data. Please ensure you have permission and data exists.");
+                setError(err instanceof Error ? err.message : "Failed to load contacts data. Please ensure you have permission and data exists.");
             } finally {
                 setLoading(false);
             }
