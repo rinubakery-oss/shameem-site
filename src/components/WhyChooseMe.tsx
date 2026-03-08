@@ -58,7 +58,7 @@ export default function WhyChooseMe() {
                                         <CheckCircle2 size={24} className="text-neon-blue group-hover:scale-110 transition-transform duration-300 group-hover:drop-shadow-[0_0_8px_rgba(0,240,255,0.6)]" />
                                     </div>
                                     <div>
-                                        <h4 className="text-xl font-semibold text-gray-200 mb-2 font-poppins group-hover:text-neon-blue transition-colors">{pt.title}</h4>
+                                        <h3 className="text-xl font-semibold text-gray-200 mb-2 font-poppins group-hover:text-neon-blue transition-colors">{pt.title}</h3>
                                         <p className="text-gray-400 group-hover:text-gray-300 transition-colors">{pt.desc}</p>
                                     </div>
                                 </motion.li>

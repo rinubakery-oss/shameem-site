@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+
 import { ArrowRight, MessageCircle } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -29,12 +29,7 @@ export default function Hero() {
             <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-neon-blue-dark/20 rounded-full blur-[120px] pointer-events-none" />
 
             <div className="container mx-auto px-6 lg:px-12 text-center relative z-10">
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
-                    className="max-w-4xl mx-auto"
-                >
+                <div className="max-w-4xl mx-auto">
                     <div className="inline-block mb-6 px-4 py-1.5 rounded-full border border-dark-border bg-dark-card text-neon-blue text-sm font-medium tracking-wide">
                         Based in Malappuram, Kerala
                     </div>
@@ -69,7 +64,7 @@ export default function Hero() {
                             <MessageCircle size={20} className="text-green-400 drop-shadow-md group-hover:scale-110 transition-transform" /> Get Free Consultation
                         </a>
                     </div>
-                </motion.div>
+                </div>
             </div>
         </section>
     );

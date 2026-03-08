@@ -50,7 +50,7 @@ export default function Testimonials() {
                         >
                             <Quote size={40} className="text-neon-blue/20 absolute top-6 right-6 group-hover:text-neon-blue/40 transition-colors duration-300 group-hover:scale-110" />
 
-                            <div className="flex gap-1 mb-6" aria-label={`Rating: ${testimonial.rating} out of 5 stars`}>
+                            <div className="flex gap-1 mb-6" role="img" aria-label={`Rating: ${testimonial.rating} out of 5 stars`}>
                                 {[...Array(testimonial.rating)].map((_, j) => (
                                     <Star key={j} fill="#00f0ff" stroke="none" size={18} aria-hidden="true" className="group-hover:scale-110 transition-transform duration-300 hover:drop-shadow-[0_0_8px_rgba(0,240,255,0.8)]" style={{ transitionDelay: `${j * 50}ms` }} />
                                 ))}

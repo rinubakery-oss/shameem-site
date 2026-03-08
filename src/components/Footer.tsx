@@ -50,11 +50,11 @@ export default function Footer() {
                     </div>
                 </div>
 
-                <div className="pt-8 border-t border-dark-border text-center flex flex-col md:flex-row justify-between items-center gap-4 text-gray-500 text-sm">
+                <div className="pt-8 border-t border-dark-border text-center flex flex-col md:flex-row justify-between items-center gap-4 text-gray-400 text-sm">
                     <p>&copy; {currentYear} Shameem Digital Marketing. All rights reserved.</p>
                     <div className="flex gap-4">
-                        <Link href="#" className="hover:text-gray-300 transition-colors">Privacy Policy</Link>
-                        <Link href="#" className="hover:text-gray-300 transition-colors">Terms of Service</Link>
+                        <Link href="#" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</Link>
+                        <Link href="#" className="text-gray-400 hover:text-white transition-colors">Terms of Service</Link>
                     </div>
                 </div>
             </div>
