@@ -50,6 +50,7 @@ export default function About() {
                                 width={800}
                                 height={800}
                                 className="w-full h-full object-cover rounded-xl grayscale hover:grayscale-0 transition-all duration-700 hover:scale-105"
+                                priority
                             />
                         </div>
                         {/* Decoration */}

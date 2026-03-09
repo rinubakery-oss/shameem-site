@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { ArrowRight, MessageCircle } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -43,53 +42,32 @@ export default function Hero() {
         return () => clearTimeout(timer);
     }, [text, isDeleting, loopNum, typingSpeed, phrases]);
 
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.1, // Reduced from 0.2
-                delayChildren: 0.05 // Reduced from 0.1
-            }
-        }
-    };
-
-    const itemVariants = {
-        hidden: { opacity: 0.3, y: 10 }, // Increased initial opacity to 0.3 and reduced y offset to 10 for faster paint
-        visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" as const } } // Reduced duration to 0.5
-    };
-
     return (
         <section id="home" className="relative min-h-[90vh] md:min-h-screen flex items-center justify-center pt-28 pb-12 md:pt-20 overflow-hidden">
             {/* Background glowing blobs - optimized for mobile */}
-            <div className="absolute top-1/4 left-1/4 w-64 h-64 md:w-96 md:h-96 bg-neon-blue/15 rounded-full blur-[80px] md:blur-[120px] pointer-events-none animate-pulse" />
-            <div className="absolute bottom-1/4 right-1/4 w-64 h-64 md:w-96 md:h-96 bg-neon-blue-dark/15 rounded-full blur-[80px] md:blur-[120px] pointer-events-none animate-pulse" style={{ animationDelay: '2s' }} />
+            <div className="absolute top-1/4 left-1/4 w-64 h-64 md:w-96 md:h-96 bg-neon-blue/10 rounded-full blur-[80px] md:blur-[120px] pointer-events-none md:animate-pulse" />
+            <div className="absolute bottom-1/4 right-1/4 w-64 h-64 md:w-96 md:h-96 bg-neon-blue-dark/10 rounded-full blur-[80px] md:blur-[120px] pointer-events-none md:animate-pulse" style={{ animationDelay: '2s' }} />
 
-            <motion.div
-                className="container mx-auto px-6 lg:px-12 text-center relative z-10"
-                variants={containerVariants}
-                initial="hidden"
-                animate="visible"
-            >
+            <div className="container mx-auto px-6 lg:px-12 text-center relative z-10">
                 <div className="max-w-4xl mx-auto">
-                    <motion.div variants={itemVariants} className="inline-block mb-6 px-4 py-1.5 rounded-full border border-dark-border bg-dark-card text-neon-blue text-xs md:text-sm font-medium tracking-wide">
+                    <div className="inline-block mb-6 px-4 py-1.5 rounded-full border border-dark-border bg-dark-card text-neon-blue text-xs md:text-sm font-medium tracking-wide animate-hero-in hero-content-initial stagger-1">
                         Expert AI Digital Marketer in Malappuram
-                    </motion.div>
+                    </div>
 
-                    <motion.h1 variants={itemVariants} className="text-3xl sm:text-5xl md:text-7xl font-bold leading-[1.15] md:leading-tight mb-6 tracking-tight">
+                    <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold leading-[1.15] md:leading-tight mb-6 tracking-tight animate-hero-in hero-content-initial stagger-2">
                         AI Digital Marketing Expert <br className="hidden md:block" />
                         in <span className="text-gradient">Malappuram, Kerala</span>
-                    </motion.h1>
+                    </h1>
 
-                    <motion.h2 variants={itemVariants} className="text-lg md:text-2xl text-gray-400 mb-10 min-h-[5rem] md:min-h-0 font-light max-w-2xl mx-auto flex flex-col md:block items-center">
+                    <h2 className="text-lg md:text-2xl text-gray-400 mb-10 min-h-[5rem] md:min-h-0 font-light max-w-2xl mx-auto flex flex-col md:block items-center animate-hero-in hero-content-initial stagger-3">
                         Helping businesses grow using AI-powered <br className="hidden md:block" />
                         <span className="flex items-center justify-center md:inline-flex mt-1 md:mt-0">
                             <span className="font-semibold text-gray-200">{text}</span>
                             <span className="animate-pulse text-neon-blue ml-1 font-bold">|</span>
                         </span>
-                    </motion.h2>
+                    </h2>
 
-                    <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center justify-center gap-4 px-4 sm:px-0">
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4 px-4 sm:px-0 animate-hero-in hero-content-initial stagger-4">
                         <Link
                             href="/#contact"
                             aria-label="Contact Shameem for AI Digital Marketing Services"
@@ -107,9 +85,9 @@ export default function Hero() {
                         >
                             <MessageCircle size={22} className="text-green-400 group-hover:scale-110 transition-transform" /> Free Consultation
                         </a>
-                    </motion.div>
+                    </div>
                 </div>
-            </motion.div>
+            </div>
         </section>
     );
 }
