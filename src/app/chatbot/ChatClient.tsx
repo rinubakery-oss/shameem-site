@@ -17,7 +17,7 @@ export default function ChatClient() {
     const [messages, setMessages] = useState<Message[]>([
         {
             role: "assistant",
-            content: "Hi! I'm DigiBot, AI assistant for Shameem Kottakkal. How can I help you today?",
+            content: "Welcome. I am DigiBot, the strategic AI assistant for Shameem Kottakkal. How may I assist you with your digital growth or brand elevation today?",
         },
     ]);
     const [input, setInput] = useState("");
@@ -141,11 +141,13 @@ export default function ChatClient() {
 
             const data = await response.json();
             let aiReply = data.reply;
+            const hasTrigger = aiReply.includes("[TRIGGER_LEAD_CAPTURE]");
 
-            if (aiReply.includes("[TRIGGER_LEAD_CAPTURE]")) {
-                aiReply = aiReply.replace("[TRIGGER_LEAD_CAPTURE]", "").trim();
+            // Clean the reply for display regardless of whether we trigger or not
+            aiReply = aiReply.replace("[TRIGGER_LEAD_CAPTURE]", "").trim();
+
+            if (hasTrigger && !isLeadCaptured) {
                 setLeadStep(1);
-
                 const newMessages: Message[] = [];
                 if (aiReply) {
                     newMessages.push({ role: "assistant", content: aiReply });
@@ -182,55 +184,58 @@ export default function ChatClient() {
             <div className="w-full md:max-w-3xl bg-[#0B0B0B] md:bg-white/5 md:border md:border-white/10 md:rounded-3xl md:shadow-2xl overflow-hidden flex flex-col h-[100dvh] md:h-[85vh] md:backdrop-blur-md relative">
 
                 {/* Header */}
-                <div className="bg-gradient-to-r from-blue-900/40 to-[#0B0B0B] p-4 md:p-5 border-b border-white/10 flex items-center justify-between z-10 sticky top-0 md:relative">
-                    <div className="flex items-center space-x-3 md:space-x-4">
+                <div className="bg-white/[0.03] backdrop-blur-2xl p-5 md:p-6 border-b border-white/10 flex items-center justify-between z-10 sticky top-0 md:relative">
+                    <div className="flex items-center space-x-4">
                         <div className="relative">
-                            <div className="w-10 h-10 md:w-14 md:h-14 flex items-center justify-center rounded-full shadow-lg shadow-neon-blue/20 bg-transparent">
-                                <Image src="/chatbot-icon.svg" alt="DigiBot" width={56} height={56} className="w-full h-full object-contain drop-shadow-md" />
+                            <div className="w-12 h-12 md:w-16 md:h-16 flex items-center justify-center rounded-2xl shadow-2xl shadow-blue-500/20 bg-gradient-to-br from-blue-500/10 to-indigo-500/5 border border-white/10">
+                                <Image src="/chatbot-icon.svg" alt="DigiBot" width={64} height={64} className="w-full h-full object-contain drop-shadow-[0_0_10px_rgba(0,180,255,0.4)]" />
                             </div>
-                            <span className="absolute bottom-0 right-0 md:right-1 w-2.5 h-2.5 md:w-3.5 md:h-3.5 bg-green-500 border-2 border-[#0B0B0B] rounded-full"></span>
+                            <span className="absolute -bottom-1 -right-1 w-4 h-4 bg-green-500 border-2 border-[#0B0B0B] rounded-full shadow-[0_0_10px_rgba(34,197,94,0.5)]"></span>
                         </div>
                         <div>
-                            <h1 className="text-lg md:text-xl font-bold text-white tracking-wide">DigiBot</h1>
-                            <p className="text-[10px] md:text-xs text-blue-300 font-medium leading-tight">AI Assistant for Shameem Kottakkal</p>
+                            <div className="flex items-center gap-2">
+                                <h1 className="text-xl md:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400 tracking-tight">DigiBot</h1>
+                                <span className="px-2 py-0.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-[10px] uppercase tracking-widest text-blue-400 font-bold">Verified AI</span>
+                            </div>
+                            <p className="text-xs md:text-sm text-slate-400 font-medium tracking-wide">Elite Digital Strategy Assistant</p>
                         </div>
                     </div>
                     {/* Close Button */}
                     <button
                         onClick={() => router.push("/")}
-                        className="w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center bg-white/5 hover:bg-white/10 border border-white/10 transition-colors text-slate-300 hover:text-white"
+                        className="w-10 h-10 rounded-xl flex items-center justify-center bg-white/5 hover:bg-white/10 border border-white/10 transition-all duration-300 text-slate-400 hover:text-white group"
                         aria-label="Close Chat"
                     >
-                        <X className="w-4 h-4 md:w-5 md:h-5" />
+                        <X className="w-5 h-5 group-hover:rotate-90 transition-transform duration-300" />
                     </button>
                 </div>
 
                 {/* Chat Area */}
-                <div className="flex-1 overflow-y-auto p-4 md:p-6 space-y-6 scrollbar-thin scrollbar-thumb-blue-600/50 scrollbar-track-transparent">
+                <div className="flex-1 overflow-y-auto p-5 md:p-8 space-y-8 scrollbar-thin scrollbar-thumb-white/10 scrollbar-track-transparent">
                     <AnimatePresence initial={false}>
                         {messages.map((message, index) => (
                             <motion.div
                                 key={index}
-                                initial={{ opacity: 0, y: 15, scale: 0.95 }}
+                                initial={{ opacity: 0, y: 20, scale: 0.98 }}
                                 animate={{ opacity: 1, y: 0, scale: 1 }}
-                                transition={{ duration: 0.3, ease: "easeOut" }}
+                                transition={{ duration: 0.4, ease: [0.19, 1, 0.22, 1] }}
                                 className={`flex ${message.role === "user" ? "justify-end" : "justify-start"} w-full`}
                             >
-                                <div className={`flex max-w-[85%] md:max-w-[75%] ${message.role === "user" ? "flex-row-reverse" : "flex-row"} items-start gap-3`}>
+                                <div className={`flex max-w-[90%] md:max-w-[80%] ${message.role === "user" ? "flex-row-reverse" : "flex-row"} items-start gap-4`}>
 
                                     {/* Avatar */}
-                                    <div className={`flex-shrink-0 w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center mt-1 shadow-md ${message.role === "user"
-                                        ? "bg-slate-700 text-slate-300"
-                                        : "bg-transparent drop-shadow-[0_0_8px_rgba(0,240,255,0.3)]"
+                                    <div className={`flex-shrink-0 w-9 h-9 md:w-11 md:h-11 rounded-xl flex items-center justify-center mt-1 shadow-lg transition-transform hover:scale-105 ${message.role === "user"
+                                        ? "bg-slate-800 border border-white/10 text-slate-300"
+                                        : "bg-gradient-to-br from-blue-500/20 to-indigo-500/10 border border-blue-500/20"
                                         }`}>
-                                        {message.role === "user" ? <User size={16} className="md:w-[18px] md:h-[18px]" /> : <Image src="/chatbot-icon.svg" alt="Bot" width={40} height={40} className="w-full h-full object-contain" />}
+                                        {message.role === "user" ? <User size={18} /> : <Image src="/chatbot-icon.svg" alt="Bot" width={44} height={44} className="w-full h-full object-contain" />}
                                     </div>
 
                                     {/* Message Bubble */}
                                     <div
-                                        className={`px-4 py-3 md:px-5 md:py-3.5 rounded-2xl text-[14px] md:text-[15px] max-w-full leading-relaxed shadow-sm ${message.role === "user"
-                                            ? "bg-gradient-to-br from-blue-600 to-indigo-700 text-white rounded-tr-sm shadow-blue-900/40"
-                                            : "bg-white/10 md:bg-[#151515]/80 backdrop-blur-xl border border-white/10 text-slate-200 rounded-tl-sm shadow-black/30"
+                                        className={`px-5 py-3.5 md:px-6 md:py-4 rounded-2xl text-[15px] md:text-[16px] leading-relaxed shadow-xl backdrop-blur-sm transition-all ${message.role === "user"
+                                            ? "bg-gradient-to-br from-blue-600 to-indigo-700 text-white rounded-tr-none shadow-blue-500/20"
+                                            : "bg-white/[0.05] border border-white/10 text-slate-200 rounded-tl-none hover:bg-white/[0.08]"
                                             }`}
                                     >
                                         <p className="whitespace-pre-wrap">{message.content}</p>
@@ -246,18 +251,21 @@ export default function ChatClient() {
                             animate={{ opacity: 1 }}
                             className="flex justify-start w-full"
                         >
-                            <div className="flex max-w-[85%] md:max-w-[75%] flex-row items-end gap-3">
-                                <div className="flex-shrink-0 w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center bg-transparent drop-shadow-[0_0_8px_rgba(0,240,255,0.3)]">
-                                    <Image src="/chatbot-icon.svg" alt="Bot" width={40} height={40} className="w-full h-full object-contain" />
+                            <div className="flex max-w-[90%] md:max-w-[80%] flex-row items-end gap-4">
+                                <div className="flex-shrink-0 w-9 h-9 md:w-11 md:h-11 rounded-xl flex items-center justify-center bg-gradient-to-br from-blue-500/20 to-indigo-500/10 border border-blue-500/20 shadow-lg">
+                                    <Image src="/chatbot-icon.svg" alt="Bot" width={44} height={44} className="w-full h-full object-contain" />
                                 </div>
-                                <div className="px-4 py-3 md:px-5 md:py-4 bg-white/10 border border-white/5 text-slate-200 rounded-2xl rounded-tl-sm shadow-[0_4px_15px_rgba(0,0,0,0.1)] flex items-center gap-2">
+                                <div className="px-6 py-4 bg-white/[0.05] border border-white/10 text-slate-200 rounded-2xl rounded-tl-none flex items-center gap-3">
                                     {leadStep === 5 ? (
-                                        <Loader2 className="w-4 h-4 animate-spin text-blue-400" />
+                                        <div className="flex items-center gap-2">
+                                            <Loader2 className="w-4 h-4 animate-spin text-blue-400" />
+                                            <span className="text-xs font-semibold text-blue-400/80 uppercase tracking-widest">Securing leads</span>
+                                        </div>
                                     ) : (
-                                        <div className="flex items-center gap-1.5 px-2">
-                                            <motion.div className="w-1.5 h-1.5 bg-blue-400 rounded-full" animate={{ y: [0, -5, 0] }} transition={{ duration: 0.6, repeat: Infinity, delay: 0 }} />
-                                            <motion.div className="w-1.5 h-1.5 bg-blue-400 rounded-full" animate={{ y: [0, -5, 0] }} transition={{ duration: 0.6, repeat: Infinity, delay: 0.2 }} />
-                                            <motion.div className="w-1.5 h-1.5 bg-blue-400 rounded-full" animate={{ y: [0, -5, 0] }} transition={{ duration: 0.6, repeat: Infinity, delay: 0.4 }} />
+                                        <div className="flex items-center gap-2 px-1">
+                                            <motion.div className="w-2 h-2 bg-blue-500 rounded-full" animate={{ opacity: [0.3, 1, 0.3] }} transition={{ duration: 1, repeat: Infinity, delay: 0 }} />
+                                            <motion.div className="w-2 h-2 bg-blue-500 rounded-full" animate={{ opacity: [0.3, 1, 0.3] }} transition={{ duration: 1, repeat: Infinity, delay: 0.2 }} />
+                                            <motion.div className="w-2 h-2 bg-blue-500 rounded-full" animate={{ opacity: [0.3, 1, 0.3] }} transition={{ duration: 1, repeat: Infinity, delay: 0.4 }} />
                                         </div>
                                     )}
                                 </div>
@@ -269,14 +277,14 @@ export default function ChatClient() {
                         <motion.div
                             initial={{ opacity: 0, y: 10 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.5 }}
-                            className="flex flex-wrap gap-2 mt-4 ml-12 md:ml-14"
+                            transition={{ delay: 0.6 }}
+                            className="flex flex-wrap gap-3 mt-6 ml-14 md:ml-16"
                         >
                             {quickReplies.map((reply, index) => (
                                 <button
                                     key={index}
                                     onClick={() => handleQuickReply(reply)}
-                                    className="px-4 py-2 bg-blue-600/10 hover:bg-blue-600/20 text-blue-300 text-[13px] md:text-sm rounded-full border border-blue-500/30 transition-colors whitespace-nowrap"
+                                    className="px-5 py-2.5 bg-white/5 hover:bg-blue-500/10 text-slate-300 hover:text-blue-400 text-sm rounded-xl border border-white/10 hover:border-blue-500/30 transition-all duration-300 shadow-lg hover:shadow-blue-500/5"
                                 >
                                     {reply}
                                 </button>
@@ -287,42 +295,45 @@ export default function ChatClient() {
                 </div>
 
                 {/* Input Area */}
-                <div className="p-3 md:p-4 bg-[#0B0B0B] md:bg-black/60 md:backdrop-blur-xl border-t border-white/10 pb-safe z-10">
+                <div className="p-5 md:p-8 bg-gradient-to-t from-black to-transparent border-t border-white/5 pb-safe z-10">
                     {leadStep > 0 && leadStep < 5 && (
                         <motion.div
-                            initial={{ opacity: 0, y: 5 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            className="mb-3 text-[11px] md:text-xs text-blue-400 font-medium px-2 uppercase tracking-widest flex items-center gap-2"
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            className="mb-4 text-[10px] md:text-xs text-blue-400 font-bold px-4 py-1.5 rounded-full bg-blue-500/5 border border-blue-500/20 uppercase tracking-[0.2em] flex items-center justify-center gap-2 w-fit mx-auto"
                         >
-                            <span className="w-1.5 h-1.5 bg-blue-500 rounded-full animate-pulse"></span>
-                            Lead Capture: Step {leadStep} of 4
+                            <span className="w-1.5 h-1.5 bg-blue-500 rounded-full animate-pulse shadow-[0_0_8px_rgba(59,130,246,0.8)]"></span>
+                            Information Capture Phase: {leadStep} / 4
                         </motion.div>
                     )}
                     <form
                         onSubmit={(e) => handleSubmit(e)}
-                        className="flex items-center gap-2 md:gap-3 max-w-full relative"
+                        className="flex items-center gap-3 md:gap-4 max-w-full relative"
                     >
-                        <input
-                            type={leadStep === 2 ? "tel" : leadStep === 3 ? "email" : "text"}
-                            value={input}
-                            onChange={(e) => setInput(e.target.value)}
-                            placeholder={leadStep > 0 ? "Type your answer..." : "Ask me anything..."}
-                            className={`flex-1 bg-white/5 hover:bg-white/10 focus:bg-white/10 text-white border ${leadStep > 0 ? "border-blue-500/50 shadow-[0_0_10px_rgba(59,130,246,0.15)]" : "border-white/10"
-                                } rounded-full px-5 py-3.5 md:px-6 md:py-4 outline-none focus:border-blue-500/80 focus:ring-1 focus:ring-blue-500/50 transition-all placeholder:text-slate-500 shadow-inner text-sm md:text-base`}
-                            disabled={isLoading || leadStep === 5}
-                            autoFocus={leadStep > 0}
-                        />
+                        <div className="relative flex-1 group">
+                            <input
+                                type={leadStep === 2 ? "tel" : leadStep === 3 ? "email" : "text"}
+                                value={input}
+                                onChange={(e) => setInput(e.target.value)}
+                                placeholder={leadStep > 0 ? "Enter your response..." : "Inquire about strategic services..."}
+                                className={`w-full bg-white/[0.03] hover:bg-white/[0.06] focus:bg-white/[0.08] text-white border ${leadStep > 0 ? "border-blue-500/40 shadow-[0_0_20px_rgba(59,130,246,0.1)]" : "border-white/10"
+                                    } rounded-2xl px-6 py-4 md:px-7 md:py-5 outline-none focus:border-blue-500/60 transition-all duration-300 placeholder:text-slate-500 text-[15px] md:text-[16px] shadow-2xl`}
+                                disabled={isLoading || leadStep === 5}
+                                autoFocus={leadStep > 0}
+                            />
+                            <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500/20 to-indigo-500/20 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none blur-xl"></div>
+                        </div>
                         <button
                             type="submit"
                             disabled={isLoading || leadStep === 5 || !input.trim()}
-                            className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white p-3.5 md:p-4 rounded-full transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-[0_0_15px_rgba(37,99,235,0.4)] flex-shrink-0"
+                            className="bg-gradient-to-br from-blue-600 to-indigo-700 hover:from-blue-500 hover:to-indigo-600 text-white p-4 md:p-5 rounded-2xl transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed shadow-[0_10px_30px_rgba(37,99,235,0.3)] hover:shadow-blue-500/40 hover:-translate-y-0.5 flex-shrink-0"
                         >
-                            <Send className="w-4 h-4 md:w-5 md:h-5 ml-0.5" />
+                            <Send className="w-5 h-5 md:w-6 md:h-6" />
                         </button>
                     </form>
-                    <div className="text-center mt-2 md:mt-3 mb-1">
-                        <span className="text-[9px] md:text-[10px] text-slate-500 uppercase tracking-widest font-semibold flex items-center justify-center gap-1">
-                            {/* Branding intentionally removed */}
+                    <div className="text-center mt-4">
+                        <span className="text-[10px] text-slate-500 uppercase tracking-[0.3em] font-bold">
+                            Strategic Excellence — Shameem Kottakkal
                         </span>
                     </div>
                 </div>

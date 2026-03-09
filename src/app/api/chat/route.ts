@@ -27,7 +27,7 @@ export async function POST(req: Request) {
         if (isLeadCaptured) {
             aiMessages.push({
                 role: "system",
-                content: "CONTEXT: The user's lead information (name, phone, email) has already been collected in this session. DO NOT use [TRIGGER_LEAD_CAPTURE] again. Acknowledge this if the user asks for a quote or consultation again by saying you already have their details."
+                content: "CRITICAL CONTEXT: The user's contact details (name, phone, email, etc.) have ALREADY been captured and saved successfully in this session. You MUST NOT use the [TRIGGER_LEAD_CAPTURE] tag under any circumstances for the rest of this conversation. If the user asks for a quote or consultation again, simply acknowledge that you already have their details and Shameem or the team will be in touch soon."
             });
         }
 
