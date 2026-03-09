@@ -8,12 +8,14 @@ const FloatingChatbot = dynamic(() => import("@/components/FloatingChatbot"));
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
+  display: "swap", // Ensure text is visible during font load
 });
 
 const poppins = Poppins({
   variable: "--font-poppins",
   weight: ["400", "500", "600", "700", "800"],
   subsets: ["latin"],
+  display: "swap", // Ensure text is visible during font load
 });
 
 export const metadata: Metadata = {

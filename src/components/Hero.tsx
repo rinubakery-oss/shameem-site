@@ -48,15 +48,15 @@ export default function Hero() {
         visible: {
             opacity: 1,
             transition: {
-                staggerChildren: 0.2,
-                delayChildren: 0.1
+                staggerChildren: 0.1, // Reduced from 0.2
+                delayChildren: 0.05 // Reduced from 0.1
             }
         }
     };
 
     const itemVariants = {
-        hidden: { opacity: 0, y: 20 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" as const } }
+        hidden: { opacity: 0.3, y: 10 }, // Increased initial opacity to 0.3 and reduced y offset to 10 for faster paint
+        visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" as const } } // Reduced duration to 0.5
     };
 
     return (
