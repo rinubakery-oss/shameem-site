@@ -28,6 +28,7 @@ export default function ChatClient() {
     // 0: idle, 1: name, 2: phone, 3: email, 4: service, 5: submitting
     const [leadStep, setLeadStep] = useState<0 | 1 | 2 | 3 | 4 | 5>(0);
     const [leadData, setLeadData] = useState({ name: "", email: "", phone: "", service: "" });
+    const [isLeadCaptured, setIsLeadCaptured] = useState(false);
     const messagesEndRef = useRef<HTMLDivElement>(null);
 
     const scrollToBottom = () => {
@@ -89,6 +90,7 @@ export default function ChatClient() {
                 ]);
 
                 setMessages(prev => [...prev, { role: "assistant", content: "Thank you! Our team will contact you soon." }]);
+                setIsLeadCaptured(true);
                 setLeadStep(0);
                 setLeadData({ name: "", email: "", phone: "", service: "" });
             } catch (error: unknown) {
@@ -129,6 +131,7 @@ export default function ChatClient() {
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
                     messages: [...messages, userMessage].filter((m) => m.role !== "system"),
+                    isLeadCaptured, // Pass lead capture status to API
                 }),
             });
 

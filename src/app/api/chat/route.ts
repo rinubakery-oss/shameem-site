@@ -13,7 +13,7 @@ Under no circumstances should you ask for their name, email, or phone number you
 
 export async function POST(req: Request) {
     try {
-        const { messages } = await req.json();
+        const { messages, isLeadCaptured } = await req.json();
 
         const aiMessages = [
             {
@@ -22,6 +22,14 @@ export async function POST(req: Request) {
             },
             ...messages,
         ];
+
+        // If lead is already captured, inform the AI via a hidden context message
+        if (isLeadCaptured) {
+            aiMessages.push({
+                role: "system",
+                content: "CONTEXT: The user's lead information (name, phone, email) has already been collected in this session. DO NOT use [TRIGGER_LEAD_CAPTURE] again. Acknowledge this if the user asks for a quote or consultation again by saying you already have their details."
+            });
+        }
 
         const completion = await groq.chat.completions.create({
             messages: aiMessages,
