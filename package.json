@@ -28,6 +28,7 @@
     "typescript": "^5"
   },
   "overrides": {
-    "formdata-node": "^6.0.3"
+    "formdata-node": "^6.0.3",
+    "node-domexception": "2.0.2"
   }
 }
