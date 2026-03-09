@@ -87,7 +87,7 @@ export default function WhyChooseMe() {
                             <motion.div
                                 animate={{ y: [0, 10, 0] }}
                                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                                className="glass-card p-6 bg-dark-bg/80 border-dark-border/50 translate-x-8 hover:border-neon-blue/30 transition-colors duration-300"
+                                className="glass-card p-6 bg-dark-bg/80 border-dark-border/50 md:translate-x-8 hover:border-neon-blue/30 transition-colors duration-300"
                             >
                                 <p className="text-5xl font-bold text-gradient mb-2">50+</p>
                                 <p className="text-gray-300 font-medium tracking-wide">Businesses Transformed</p>

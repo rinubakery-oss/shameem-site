@@ -53,8 +53,8 @@ export default function About() {
                             />
                         </div>
                         {/* Decoration */}
-                        <div className="absolute -top-6 -right-6 w-32 h-32 bg-neon-blue/20 rounded-full blur-2xl z-0" />
-                        <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-neon-blue-dark/20 rounded-full blur-2xl z-0" />
+                        <div className="absolute -top-4 -right-4 md:-top-6 md:-right-6 w-32 h-32 bg-neon-blue/20 rounded-full blur-2xl z-0" />
+                        <div className="absolute -bottom-4 -left-4 md:-bottom-6 md:-left-6 w-32 h-32 bg-neon-blue-dark/20 rounded-full blur-2xl z-0" />
                     </motion.div>
 
                     {/* Text Content */}

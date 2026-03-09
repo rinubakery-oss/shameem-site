@@ -7,20 +7,41 @@ import { useEffect, useState } from "react";
 
 export default function Hero() {
     const [text, setText] = useState("");
-    const fullText = "SEO, SMM, and Google Ads";
+    const [isDeleting, setIsDeleting] = useState(false);
+    const [loopNum, setLoopNum] = useState(0);
+    const [typingSpeed, setTypingSpeed] = useState(150);
+
+    const phrases = [
+        "SEO Optimization",
+        "Social Media Marketing",
+        "Google Ads Management",
+        "AI-Powered Marketing"
+    ];
 
     useEffect(() => {
-        let i = 0;
-        const typingInterval = setInterval(() => {
-            if (i < fullText.length) {
-                setText(fullText.slice(0, i + 1));
-                i++;
+        const handleTyping = () => {
+            const i = loopNum % phrases.length;
+            const fullPhrase = phrases[i];
+
+            if (isDeleting) {
+                setText(fullPhrase.substring(0, text.length - 1));
+                setTypingSpeed(50);
             } else {
-                clearInterval(typingInterval);
+                setText(fullPhrase.substring(0, text.length + 1));
+                setTypingSpeed(150);
             }
-        }, 100);
-        return () => clearInterval(typingInterval);
-    }, []);
+
+            if (!isDeleting && text === fullPhrase) {
+                setTimeout(() => setIsDeleting(true), 1500);
+            } else if (isDeleting && text === "") {
+                setIsDeleting(false);
+                setLoopNum(loopNum + 1);
+            }
+        };
+
+        const timer = setTimeout(handleTyping, typingSpeed);
+        return () => clearTimeout(timer);
+    }, [text, isDeleting, loopNum, typingSpeed, phrases]);
 
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -60,10 +81,12 @@ export default function Hero() {
                         in <span className="text-gradient">Malappuram, Kerala</span>
                     </motion.h1>
 
-                    <motion.h2 variants={itemVariants} className="text-lg md:text-2xl text-gray-400 mb-10 min-h-[5rem] md:min-h-0 font-light max-w-2xl mx-auto">
+                    <motion.h2 variants={itemVariants} className="text-lg md:text-2xl text-gray-400 mb-10 min-h-[5rem] md:min-h-0 font-light max-w-2xl mx-auto flex flex-col md:block items-center">
                         Helping businesses grow using AI-powered <br className="hidden md:block" />
-                        <span className="font-semibold text-gray-200 block md:inline mt-1 md:mt-0">{text}</span>
-                        <span className="animate-pulse text-neon-blue ml-0.5">|</span>
+                        <span className="flex items-center justify-center md:inline-flex mt-1 md:mt-0">
+                            <span className="font-semibold text-gray-200">{text}</span>
+                            <span className="animate-pulse text-neon-blue ml-1 font-bold">|</span>
+                        </span>
                     </motion.h2>
 
                     <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center justify-center gap-4 px-4 sm:px-0">

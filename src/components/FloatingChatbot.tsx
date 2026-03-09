@@ -28,7 +28,7 @@ export default function FloatingChatbot() {
     }
 
     return (
-        <div className="fixed bottom-24 right-6 md:bottom-12 md:right-12 z-[9999] flex flex-col items-end gap-4 pointer-events-none pr-[env(safe-area-inset-right)] pb-[env(safe-area-inset-bottom)]">
+        <div className="fixed bottom-6 right-6 md:bottom-12 md:right-12 z-[9999] flex flex-col items-end gap-4 pointer-events-none pr-[env(safe-area-inset-right)] pb-[env(safe-area-inset-bottom)]">
             {/* Tooltip / Message Bubble */}
             <AnimatePresence>
                 {showTooltip && (
