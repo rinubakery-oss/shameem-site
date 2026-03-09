@@ -82,7 +82,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className="dark scroll-smooth" suppressHydrationWarning>
+    <html lang="en" className="dark scroll-smooth">
       <body
         className={`${inter.variable} ${poppins.variable} antialiased bg-dark-bg text-gray-100 font-sans relative`}
         suppressHydrationWarning

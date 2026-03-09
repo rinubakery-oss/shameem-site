@@ -111,9 +111,9 @@ export default function Contact() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label="Message on WhatsApp"
-                                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-dark-card border border-dark-border hover:border-green-500/50 hover:bg-green-500/10 transition-colors duration-300 text-white font-medium group hover:-translate-y-1 hover:shadow-[0_4px_15px_rgba(34,197,94,0.2)]"
+                                className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-dark-card border border-dark-border hover:border-green-500/50 hover:bg-green-500/10 active:scale-95 transition-all duration-300 text-white font-bold group hover:-translate-y-1 hover:shadow-[0_8px_25px_rgba(34,197,94,0.2)]"
                             >
-                                <MessageSquare size={18} className="text-green-500 group-hover:scale-110 transition-transform" /> Message on WhatsApp
+                                <MessageSquare size={20} className="text-green-500 group-hover:scale-110 transition-transform" /> Message on WhatsApp
                             </a>
                         </div>
                     </motion.div>
@@ -195,7 +195,7 @@ export default function Contact() {
                                 <button
                                     type="submit"
                                     disabled={status === "loading"}
-                                    className="w-full bg-neon-blue hover:bg-neon-blue-dark text-dark-bg font-semibold py-4 rounded-xl transition-all duration-300 hover:-translate-y-1 shadow-[0_0_20px_rgba(0,240,255,0.4)] hover:shadow-[0_0_40px_rgba(0,240,255,0.7)] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center text-lg active:scale-95"
+                                    className="w-full bg-neon-blue hover:bg-neon-blue-dark text-dark-bg font-bold py-4 rounded-xl transition-all duration-300 hover:-translate-y-1 shadow-[0_0_20px_rgba(0,240,255,0.4)] hover:shadow-[0_0_40px_rgba(0,240,255,0.7)] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center text-lg active:scale-95"
                                 >
                                     {status === "loading" ? "Sending..." : "Send Message"}
                                 </button>

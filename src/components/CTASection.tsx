@@ -38,17 +38,17 @@ export default function CTASection() {
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label="Message on WhatsApp"
-                            className="w-full sm:w-auto px-8 py-4 rounded-full bg-green-500 hover:bg-green-600 text-white font-semibold text-lg flex items-center justify-center gap-2 transition-all duration-300 shadow-[0_0_20px_rgba(34,197,94,0.3)] hover:shadow-[0_0_30px_rgba(34,197,94,0.6)] hover:-translate-y-1 group"
+                            className="w-full sm:w-auto px-8 py-4 rounded-full bg-green-500 hover:bg-green-600 active:scale-95 text-white font-bold text-lg flex items-center justify-center gap-2 transition-all duration-300 shadow-[0_0_20px_rgba(34,197,94,0.4)] hover:shadow-[0_0_35px_rgba(34,197,94,0.7)] hover:-translate-y-1 group"
                         >
-                            <MessageCircle size={22} className="group-hover:scale-110 transition-transform" /> WhatsApp Now
+                            <MessageCircle size={24} className="group-hover:scale-110 transition-transform" /> WhatsApp Now
                         </a>
 
                         <Link
                             href="/#contact"
                             aria-label="Book a free consultation"
-                            className="w-full sm:w-auto px-8 py-4 rounded-full bg-neon-blue hover:bg-neon-blue-dark text-dark-bg font-semibold text-lg flex items-center justify-center gap-2 transition-all duration-300 shadow-[0_0_20px_rgba(0,240,255,0.4)] hover:shadow-[0_0_40px_rgba(0,240,255,0.8)] hover:-translate-y-1 group relative overflow-hidden"
+                            className="w-full sm:w-auto px-8 py-4 rounded-full bg-neon-blue hover:bg-neon-blue-dark active:scale-95 text-dark-bg font-bold text-lg flex items-center justify-center gap-2 transition-all duration-300 shadow-[0_0_20px_rgba(0,240,255,0.4)] hover:shadow-[0_0_40px_rgba(0,240,255,0.8)] hover:-translate-y-1 group relative overflow-hidden"
                         >
-                            <span className="relative z-10 flex items-center gap-2">Book Consultation <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" /></span>
+                            <span className="relative z-10 flex items-center gap-2">Book Consultation <ArrowRight size={22} className="group-hover:translate-x-1 transition-transform" /></span>
                         </Link>
                     </div>
                 </motion.div>
