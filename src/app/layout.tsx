@@ -62,9 +62,6 @@ export const metadata: Metadata = {
     ],
   },
   manifest: '/site.webmanifest',
-  verification: {
-    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
-  },
 };
 
 export const viewport = {
