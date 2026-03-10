@@ -6,7 +6,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { useRouter } from "next/navigation";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
-import { db } from "../../firebase";
+import { getDb } from "../../firebase";
 
 type Message = {
     role: "user" | "assistant" | "system";
@@ -82,7 +82,7 @@ export default function ChatClient() {
                 });
 
                 await Promise.race([
-                    addDoc(collection(db, "leads"), {
+                    addDoc(collection(getDb(), "leads"), {
                         ...finalLeadData,
                         createdAt: serverTimestamp()
                     }),

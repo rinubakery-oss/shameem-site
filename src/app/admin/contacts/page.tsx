@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { collection, getDocs, query } from "firebase/firestore";
-import { db } from "@/firebase";
+import { getDb } from "@/firebase";
 
 interface ContactMessage {
     id: string;
@@ -20,7 +20,7 @@ export default function ContactsPage() {
     useEffect(() => {
         const fetchContacts = async () => {
             try {
-                const q = query(collection(db, "contacts"));
+                const q = query(collection(getDb(), "contacts"));
                 const querySnapshot = await getDocs(q);
 
                 const fetchedContacts: ContactMessage[] = [];

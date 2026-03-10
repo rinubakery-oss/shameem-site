@@ -49,6 +49,7 @@ export default function About() {
                                 alt="Portrait of Shameem - AI Digital Marketing & SEO Expert in Malappuram, Kerala"
                                 width={800}
                                 height={800}
+                                sizes="(max-width: 768px) 100vw, 400px"
                                 className="w-full h-full object-cover rounded-xl grayscale hover:grayscale-0 transition-all duration-700 hover:scale-105"
                                 priority
                             />

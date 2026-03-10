@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, MapPin, Phone, MessageSquare } from "lucide-react";
 import { collection, addDoc } from "firebase/firestore";
-import { db } from "../firebase";
+import { getDb } from "../firebase";
 
 export default function Contact() {
     const [formData, setFormData] = useState({
@@ -37,7 +37,7 @@ export default function Contact() {
             });
 
             await Promise.race([
-                addDoc(collection(db, "contacts"), formData),
+                addDoc(collection(getDb(), "contacts"), formData),
                 timeoutPromise
             ]);
 

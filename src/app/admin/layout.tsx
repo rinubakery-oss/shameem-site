@@ -4,7 +4,7 @@ import { AuthProvider } from "@/context/AuthContext";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { useAuth } from "@/context/AuthContext";
-import { auth } from "@/firebase";
+import { getAuthInstance } from "@/firebase";
 import { signOut } from "firebase/auth";
 import { LogOut, Users, MessageSquare } from "lucide-react";
 import { useRouter } from "next/navigation";
@@ -15,7 +15,7 @@ function AdminSidebar() {
 
     const handleLogout = async () => {
         try {
-            await signOut(auth);
+            await signOut(getAuthInstance());
             router.push("/admin/login");
         } catch (error) {
             console.error("Error signing out:", error);
@@ -104,7 +104,7 @@ function MainAdminLayout({ children }: { children: React.ReactNode }) {
                     </h2>
                     <button
                         onClick={async () => {
-                            await signOut(auth);
+                            await signOut(getAuthInstance());
                             router.push("/admin/login");
                         }}
                         title="Logout"

@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { collection, getDocs, query, Timestamp } from "firebase/firestore";
-import { db } from "@/firebase";
+import { getDb } from "@/firebase";
 
 interface ChatbotLead {
     id: string;
@@ -22,7 +22,7 @@ export default function LeadsPage() {
         const fetchLeads = async () => {
             try {
                 // ChatClient saves createdAt, so we can order by it (descending usually needs an index, so we sort client-side just in case)
-                const q = query(collection(db, "leads"));
+                const q = query(collection(getDb(), "leads"));
                 const querySnapshot = await getDocs(q);
 
                 const fetchedLeads: ChatbotLead[] = [];

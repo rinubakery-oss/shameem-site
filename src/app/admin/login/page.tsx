@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "@/firebase";
+import { getAuthInstance } from "@/firebase";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/context/AuthContext";
 import { LogIn } from "lucide-react";
@@ -29,7 +29,7 @@ export default function AdminLogin() {
         setError("");
 
         try {
-            await signInWithEmailAndPassword(auth, email, password);
+            await signInWithEmailAndPassword(getAuthInstance(), email, password);
             router.push("/admin/contacts");
         } catch (err: unknown) {
             setError(err instanceof Error ? err.message : "Failed to log in");
