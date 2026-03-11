@@ -164,13 +164,13 @@ export default function ChatClient() {
                     { role: "assistant", content: aiReply },
                 ]);
             }
-        } catch (error) {
+        } catch (error: any) {
             console.error("Chat error:", error);
             setMessages((prev) => [
                 ...prev,
                 {
                     role: "assistant",
-                    content: "Sorry, I am having trouble connecting right now. Please try again later.",
+                    content: `Sorry, I am having trouble connecting right now (${error?.message || "connection error"}). Please try again later.`,
                 },
             ]);
         } finally {

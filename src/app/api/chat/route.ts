@@ -1,8 +1,14 @@
 import { NextResponse } from "next/server";
 import Groq from "groq-sdk";
 
+const apiKey = process.env.GROQ_API_KEY;
+
+if (!apiKey) {
+    console.error("GROQ_API_KEY is not defined in the environment variables.");
+}
+
 const groq = new Groq({
-    apiKey: process.env.GROQ_API_KEY,
+    apiKey: apiKey || "MISSING_API_KEY",
 });
 
 const SYSTEM_PROMPT = `You are DigiBot, a highly professional AI assistant for Shameem Kottakkal, an elite AI-first digital marketing expert in Malappuram, Kerala.
@@ -41,11 +47,16 @@ export async function POST(req: Request) {
         const aiResponse = completion.choices[0]?.message.content || "Sorry, I could not process your request.";
 
         return NextResponse.json({ reply: aiResponse });
-    } catch (error) {
+    } catch (error: any) {
         console.error("Error with Groq API:", error);
+        
+        // Handle specific error cases if needed
+        const errorMessage = error?.message || "Failed to fetch response from AI.";
+        const statusCode = error?.status || 500;
+
         return NextResponse.json(
-            { error: "Failed to fetch response from AI." },
-            { status: 500 }
+            { error: errorMessage },
+            { status: statusCode }
         );
     }
 }
