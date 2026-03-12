@@ -43,7 +43,7 @@ export default function Hero() {
     }, [text, isDeleting, loopNum, typingSpeed, phrases]);
 
     return (
-        <section id="home" className="relative min-h-[90vh] md:min-h-screen flex items-center justify-center pt-28 pb-12 md:pt-20 overflow-hidden">
+        <section id="home" className="relative min-h-[90vh] md:min-h-screen flex items-center justify-center pt-24 pb-12 md:pt-20 overflow-hidden">
             {/* Background glowing blobs - optimized for mobile */}
             <div className="absolute top-1/4 left-1/4 w-64 h-64 md:w-96 md:h-96 bg-neon-blue/10 rounded-full blur-[80px] md:blur-[120px] pointer-events-none md:animate-pulse" />
             <div className="absolute bottom-1/4 right-1/4 w-64 h-64 md:w-96 md:h-96 bg-neon-blue-dark/10 rounded-full blur-[80px] md:blur-[120px] pointer-events-none md:animate-pulse" style={{ animationDelay: '2s' }} />
@@ -54,14 +54,14 @@ export default function Hero() {
                         Expert AI Digital Marketer in Malappuram
                     </div>
 
-                    <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold leading-[1.15] md:leading-tight mb-6 tracking-tight animate-hero-in hero-content-initial stagger-2">
+                    <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold leading-[1.1] md:leading-tight mb-6 tracking-tight animate-hero-in hero-content-initial stagger-2">
                         AI Digital Marketing Expert <br className="hidden md:block" />
                         in <span className="text-gradient">Malappuram, Kerala</span>
                     </h1>
 
                     <h2 className="text-lg md:text-2xl text-gray-400 mb-10 min-h-[5rem] md:min-h-0 font-light max-w-2xl mx-auto flex flex-col md:block items-center animate-hero-in hero-content-initial stagger-3">
                         Helping businesses grow using AI-powered <br className="hidden md:block" />
-                        <span className="flex items-center justify-center md:inline-flex mt-1 md:mt-0">
+                        <span className="flex items-center justify-center md:inline-flex mt-2 md:mt-0">
                             <span className="font-semibold text-gray-200">{text}</span>
                             <span className="animate-pulse text-neon-blue ml-1 font-bold">|</span>
                         </span>

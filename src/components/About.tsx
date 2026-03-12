@@ -81,9 +81,9 @@ export default function About() {
                             My core focus is always on ROI—delivering tangible results, capturing high-quality leads, and driving sustainable business growth for my clients.
                         </p>
 
-                        <ul className="grid grid-cols-2 gap-4 pt-4" aria-label="Key Qualifications">
+                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4" aria-label="Key Qualifications">
                             {stats.map((stat, i) => (
-                                <li key={i} className="flex items-center gap-3 p-4 glass-card group hover:border-neon-blue/30 transition-all duration-300 hover:shadow-[0_4px_20px_rgba(0,240,255,0.1)] hover:-translate-y-1">
+                                <li key={i} className="flex items-center gap-4 p-5 glass-card group hover:border-neon-blue/30 transition-all duration-300 hover:shadow-[0_4px_20px_rgba(0,240,255,0.1)] hover:-translate-y-1">
                                     {stat.icon}
                                     <span className="font-semibold text-gray-200 group-hover:text-white transition-colors">{stat.label}</span>
                                 </li>

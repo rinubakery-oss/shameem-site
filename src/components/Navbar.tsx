@@ -89,7 +89,7 @@ export default function Navbar() {
                             className="md:hidden fixed top-0 right-0 h-full w-[80%] max-w-sm bg-dark-bg border-l border-dark-border z-50 p-8 shadow-2xl flex flex-col"
                         >
                             <div className="flex justify-between items-center mb-12">
-                                <span className="text-2xl font-bold font-poppins">Menu<span className="text-neon-blue">.</span></span>
+                                <span className="text-2xl font-bold font-poppins">Navigation<span className="text-neon-blue">.</span></span>
                                 <button
                                     onClick={() => setIsOpen(false)}
                                     className="p-2 text-gray-400 hover:text-white"

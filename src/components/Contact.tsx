@@ -124,9 +124,9 @@ export default function Contact() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
                     >
-                        <div className="glass-card p-8">
+                        <div className="glass-card p-6 md:p-8">
                             <h3 className="text-2xl font-semibold font-poppins mb-6">Send a Message</h3>
-                            <form className="space-y-6" onSubmit={handleSubmit}>
+                            <form className="space-y-5" onSubmit={handleSubmit}>
                                 {status === "success" && (
                                     <div className="bg-green-500/10 border border-green-500 text-green-500 px-4 py-3 rounded-lg text-sm">
                                         Message sent successfully! I&apos;ll get back to you soon.
