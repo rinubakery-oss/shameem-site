@@ -45,21 +45,21 @@ export default function Hero() {
     return (
         <section id="home" className="relative min-h-[90vh] md:min-h-screen flex items-center justify-center pt-24 pb-12 md:pt-20 overflow-hidden">
             {/* Background glowing blobs - optimized for mobile */}
-            <div className="absolute top-1/4 left-1/4 w-64 h-64 md:w-96 md:h-96 bg-neon-blue/10 rounded-full blur-[80px] md:blur-[120px] pointer-events-none md:animate-pulse" />
-            <div className="absolute bottom-1/4 right-1/4 w-64 h-64 md:w-96 md:h-96 bg-neon-blue-dark/10 rounded-full blur-[80px] md:blur-[120px] pointer-events-none md:animate-pulse" style={{ animationDelay: '2s' }} />
+            <div className="absolute top-1/4 left-1/4 w-48 h-48 md:w-96 md:h-96 bg-neon-blue/5 rounded-full blur-[60px] md:blur-[120px] pointer-events-none md:animate-pulse" />
+            <div className="absolute bottom-1/4 right-1/4 w-48 h-48 md:w-96 md:h-96 bg-neon-blue-dark/5 rounded-full blur-[60px] md:blur-[120px] pointer-events-none md:animate-pulse" style={{ animationDelay: '2s' }} />
 
             <div className="container mx-auto px-6 lg:px-12 text-center relative z-10">
                 <div className="max-w-4xl mx-auto">
-                    <div className="inline-block mb-6 px-4 py-1.5 rounded-full border border-dark-border bg-dark-card text-neon-blue text-xs md:text-sm font-medium tracking-wide animate-hero-in hero-content-initial stagger-1">
+                    <div className="inline-block mb-6 px-4 py-1.5 rounded-full border border-dark-border bg-dark-card text-neon-blue text-xs md:text-sm font-medium tracking-wide animate-hero-in hero-content-initial">
                         Expert AI Digital Marketer in Malappuram
                     </div>
 
-                    <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold leading-[1.1] md:leading-tight mb-6 tracking-tight animate-hero-in hero-content-initial stagger-2">
+                    <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold leading-[1.1] md:leading-tight mb-6 tracking-tight animate-hero-in hero-content-initial stagger-1">
                         AI Digital Marketing Expert <br className="hidden md:block" />
                         in <span className="text-gradient">Malappuram, Kerala</span>
                     </h1>
 
-                    <h2 className="text-lg md:text-2xl text-gray-400 mb-10 min-h-[5rem] md:min-h-0 font-light max-w-2xl mx-auto flex flex-col md:block items-center animate-hero-in hero-content-initial stagger-3">
+                    <h2 className="text-lg md:text-2xl text-gray-400 mb-10 min-h-[5rem] md:min-h-0 font-light max-w-2xl mx-auto flex flex-col md:block items-center animate-hero-in hero-content-initial stagger-2">
                         Helping businesses grow using AI-powered <br className="hidden md:block" />
                         <span className="flex items-center justify-center md:inline-flex mt-2 md:mt-0">
                             <span className="font-semibold text-gray-200">{text}</span>
@@ -67,7 +67,7 @@ export default function Hero() {
                         </span>
                     </h2>
 
-                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4 px-4 sm:px-0 animate-hero-in hero-content-initial stagger-4">
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4 px-4 sm:px-0 animate-hero-in hero-content-initial stagger-3">
                         <Link
                             href="/#contact"
                             aria-label="Contact Shameem for AI Digital Marketing Services"

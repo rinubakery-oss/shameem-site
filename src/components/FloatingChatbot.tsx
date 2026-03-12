@@ -10,10 +10,10 @@ export default function FloatingChatbot() {
     const [showTooltip, setShowTooltip] = useState(false);
 
     useEffect(() => {
-        // Show tooltip after a short delay on desktop
+        // Show tooltip after a long delay on desktop to reduce initial load weight
         const timer = setTimeout(() => {
             setShowTooltip(true);
-        }, 6000);
+        }, 10000);
         return () => clearTimeout(timer);
     }, []);
 
@@ -69,12 +69,12 @@ export default function FloatingChatbot() {
                     {/* Floating Animation Wrapper */}
                     <motion.div
                         animate={{
-                            y: [0, -8, 0],
+                            y: [0, -5, 0],
                         }}
                         transition={{
-                            duration: 4,
+                            duration: 5,
                             repeat: Infinity,
-                            ease: "easeInOut"
+                            ease: "linear"
                         }}
                         className="relative flex items-center justify-center"
                     >
