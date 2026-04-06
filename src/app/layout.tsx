@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import dynamic from "next/dynamic";
-
+import Script from "next/script";
 const FloatingChatbot = dynamic(() => import("@/components/FloatingChatbot"));
 
 const inter = Inter({
@@ -94,7 +94,15 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${poppins.variable} antialiased bg-dark-bg text-gray-100 font-sans relative`}
         suppressHydrationWarning
-      >
+      ><!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-PN21DYQ1YK"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-PN21DYQ1YK');
+        </script>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
