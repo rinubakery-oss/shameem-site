@@ -1,15 +1,13 @@
-"use client";
-
 import { motion } from "framer-motion";
 import { Award, Briefcase, GraduationCap, TrendingUp } from "lucide-react";
 import Image from "next/image";
 
 export default function About() {
     const stats = [
-        { icon: <Award size={24} className="text-neon-blue group-hover:scale-110 transition-transform duration-300" />, label: "AI Marketing Expert" },
+        { icon: <Award size={24} className="text-neon-blue group-hover:scale-110 transition-transform duration-300" />, label: "Digital Marketing Expert" },
         { icon: <GraduationCap size={24} className="text-neon-blue-dark group-hover:scale-110 transition-transform duration-300" />, label: "Oxdu Trained" },
         { icon: <TrendingUp size={24} className="text-neon-blue group-hover:scale-110 transition-transform duration-300" />, label: "Result Driven" },
-        { icon: <Briefcase size={24} className="text-neon-blue-dark group-hover:scale-110 transition-transform duration-300" />, label: "Local Focus" },
+        { icon: <Briefcase size={24} className="text-neon-blue-dark group-hover:scale-110 transition-transform duration-300" />, label: "Local & Global Focus" },
     ];
 
     return (
@@ -44,7 +42,7 @@ export default function About() {
                         <div className="aspect-square rounded-2xl overflow-hidden glass-card p-2 relative z-10 bg-gradient-to-br from-gray-800 to-gray-900 border border-white/10">
                             <Image
                                 src="/ai-digital-marketing-expert-malappuram-kerala.webp"
-                                alt="Portrait of Shameem - AI Digital Marketing & SEO Expert in Malappuram, Kerala"
+                                alt="Portrait of Shameem - Digital Marketing & SEO Expert in Malappuram, Kerala"
                                 width={800}
                                 height={800}
                                 sizes="(max-width: 768px) 100vw, 400px"
@@ -64,8 +62,8 @@ export default function About() {
                         transition={{ duration: 0.8 }}
                         className="space-y-6"
                     >
-                        <h3 className="text-3xl font-semibold font-poppins">
-                            My Journey & Expertise
+                        <h3 className="text-3xl font-semibold font-poppins text-white">
+                            Specializing in Data-Driven Growth
                         </h3>
 
                         <p className="text-gray-400 text-base leading-relaxed text-justify">
