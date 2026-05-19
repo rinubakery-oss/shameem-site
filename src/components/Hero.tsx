@@ -45,8 +45,8 @@ export default function Hero() {
     return (
         <section id="home" className="relative min-h-[90vh] md:min-h-screen flex items-center justify-center pt-24 pb-12 md:pt-20 overflow-hidden">
             {/* Background glowing blobs - optimized for mobile */}
-            <div className="absolute top-1/4 left-1/4 w-48 h-48 md:w-96 md:h-96 bg-neon-blue/5 rounded-full blur-[60px] md:blur-[120px] pointer-events-none md:animate-pulse" />
-            <div className="absolute bottom-1/4 right-1/4 w-48 h-48 md:w-96 md:h-96 bg-neon-blue-dark/5 rounded-full blur-[60px] md:blur-[120px] pointer-events-none md:animate-pulse" style={{ animationDelay: '2s' }} />
+            <div className="absolute top-1/4 left-1/4 w-48 h-48 md:w-96 md:h-96 bg-neon-blue/5 rounded-full blur-3xl md:blur-[120px] pointer-events-none md:animate-pulse" />
+            <div className="absolute bottom-1/4 right-1/4 w-48 h-48 md:w-96 md:h-96 bg-neon-blue-dark/5 rounded-full blur-3xl md:blur-[120px] pointer-events-none md:animate-pulse" style={{ animationDelay: '2s' }} />
 
             <div className="container mx-auto px-6 lg:px-12 text-center relative z-10">
                 <div className="max-w-4xl mx-auto">

@@ -87,7 +87,7 @@ const FAQSection = () => {
                     </p>
                 </motion.div>
 
-                <div className="space-y-4">
+                <div className="space-y-5 md:space-y-6">
                     {faqs.map((faq, index) => {
                         const isOpen = openIndex === index;
 
@@ -105,7 +105,7 @@ const FAQSection = () => {
                             >
                                 <button
                                     onClick={() => toggleFaq(index)}
-                                    className="w-full flex items-center justify-between p-6 text-left focus:outline-none focus:ring-2 focus:ring-neon-blue/50 rounded-2xl group"
+                                    className="w-full flex items-center justify-between p-5 md:p-6 text-left focus:outline-none focus:ring-2 focus:ring-neon-blue/50 rounded-2xl group"
                                     aria-expanded={isOpen}
                                     aria-controls={`faq-answer-${index}`}
                                     id={`faq-question-${index}`}
@@ -137,7 +137,7 @@ const FAQSection = () => {
                                                 id={`faq-answer-${index}`}
                                                 role="region"
                                                 aria-labelledby={`faq-question-${index}`}
-                                                className="px-6 pb-6 pt-0 text-gray-400 text-lg leading-relaxed font-light mt-2 border-t border-white/5"
+                                                className="px-5 pb-5 md:px-6 md:pb-6 pt-0 text-gray-400 text-lg leading-relaxed font-light mt-2 border-t border-white/5"
                                             >
                                                 <div className="pt-4">
                                                     {faq.answer}

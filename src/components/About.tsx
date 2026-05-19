@@ -27,10 +27,8 @@ export default function About() {
                     </h2>
                     <div className="h-1 w-20 bg-neon-blue mx-auto rounded-full mb-8" />
 
-                    <p className="text-lg text-gray-300 leading-relaxed">
-                        I am Shameem, an AI digital marketing expert based in Malappuram, Kerala.
-                        Trained at the prestigious <span className="text-white font-semibold">Oxdu Digital Marketing Institute</span>,
-                        I bring cutting-edge strategies to local and global businesses.
+                    <p className="text-base md:text-lg text-gray-300 leading-relaxed text-justify md:text-center">
+                        Hello, I am Shameem, a dedicated and results-driven digital marketing professional based in Kottakkal, Malappuram, Kerala. Backed by a solid academic foundation and certified expertise in digital marketing, my core mission is to empower businesses to thrive and stand out in today&apos;s competitive digital landscape. By blending strategic planning with creative execution, I collaborate closely with clients to build compelling online identities that truly resonate with their target audience.
                     </p>
                 </motion.div>
 
@@ -64,20 +62,22 @@ export default function About() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
-                        className="space-y-8"
+                        className="space-y-6"
                     >
                         <h3 className="text-3xl font-semibold font-poppins">
-                            Specializing in Data-Driven Growth
+                            My Journey & Expertise
                         </h3>
 
-                        <p className="text-gray-400 text-lg leading-relaxed">
-                            My expertise covers every angle of the digital landscape. I specialize in
-                            <span className="text-white font-medium"> SEO, Social Media Marketing (SMM), Search Engine Marketing (SEM)</span>,
-                            and <span className="text-neon-blue font-medium">AI-powered marketing strategies</span>.
+                        <p className="text-gray-400 text-base leading-relaxed text-justify">
+                            I hold a BA in Sociology from Sree Narayana Guru Open University and am currently advancing my skills through a comprehensive Digital Marketing program at <span className="text-white font-medium">Oxdu Media School in Kondotty</span>. This commitment to continuous learning ensures I stay ahead of the latest industry trends and tools, enabling me to consistently deliver high-impact, data-driven results for my clients.
                         </p>
 
-                        <p className="text-gray-400 text-lg leading-relaxed">
-                            My core focus is always on ROI—delivering tangible results, capturing high-quality leads, and driving sustainable business growth for my clients.
+                        <p className="text-gray-400 text-base leading-relaxed text-justify">
+                            Beyond standard digital marketing practices, I bring valuable skills in <span className="text-neon-blue font-medium">graphic design</span> along with proficient typing abilities in both Malayalam and Arabic. This unique combination of technical know-how and creative vision allows me to design highly engaging, aesthetically pleasing marketing collateral and customized content for diverse audiences.
+                        </p>
+
+                        <p className="text-gray-400 text-base leading-relaxed text-justify">
+                            My primary areas of expertise encompass <span className="text-white font-medium">Search Engine Optimization (SEO), Social Media Marketing (SMM), Search Engine Marketing (SEM), Content Marketing, and Web Development</span>. Whether you are launching a brand from scratch, refining an existing digital strategy, or tackling specific marketing hurdles, I am fully equipped to support your growth journey with strategic insight, passion, and utmost professionalism.
                         </p>
 
                         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4" aria-label="Key Qualifications">

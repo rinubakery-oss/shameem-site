@@ -116,6 +116,20 @@ export default function Contact() {
                                 <MessageSquare size={20} className="text-green-500 group-hover:scale-110 transition-transform" /> Message on WhatsApp
                             </a>
                         </div>
+                        
+                        <div className="pt-8 w-full">
+                            <div className="w-full h-64 sm:h-80 rounded-2xl overflow-hidden border border-dark-border grayscale hover:grayscale-0 transition-all duration-500 shadow-inner">
+                                <iframe 
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1269.4383364229004!2d76.00767133555155!3d11.001536783789913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4329005584a67f91%3A0x709d69f73c309dbe!2sshameem%20kottakkal!5e0!3m2!1sen!2sin!4v1775496576847!5m2!1sen!2sin" 
+                                    width="100%" 
+                                    height="100%" 
+                                    style={{ border: 0 }} 
+                                    allowFullScreen 
+                                    loading="lazy" 
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                ></iframe>
+                            </div>
+                        </div>
                     </motion.div>
 
                     <motion.div

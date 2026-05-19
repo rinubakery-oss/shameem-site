@@ -28,12 +28,12 @@ export default function Navbar() {
 
     return (
         <nav
-            className={`fixed w-full top-0 z-50 transition-all duration-300 ${scrolled
-                ? "glass-nav py-4"
-                : "bg-transparent py-6"
+            className={`fixed w-full top-0 z-[100] transition-all duration-300 ${scrolled
+                ? "bg-dark-bg/95 backdrop-blur-2xl border-b border-dark-border py-3 md:py-4 shadow-[0_4px_30px_rgba(0,0,0,0.5)]"
+                : "bg-gradient-to-b from-dark-bg/80 to-transparent py-4 md:py-6"
                 }`}
         >
-            <div className="container mx-auto px-6 lg:px-12 flex justify-between items-center relative z-50">
+            <div className="container mx-auto px-5 md:px-6 lg:px-12 flex justify-between items-center relative z-50">
                 {/* Logo */}
                 <Link href="/#home" className="text-2xl font-bold font-poppins text-gray-100 tracking-tight">
                     Shameem<span className="text-neon-blue">.</span>

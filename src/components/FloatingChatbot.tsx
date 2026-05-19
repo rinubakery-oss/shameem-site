@@ -28,7 +28,7 @@ export default function FloatingChatbot() {
     }
 
     return (
-        <div className="fixed bottom-6 right-6 md:bottom-12 md:right-12 z-[9999] flex flex-col items-end gap-4 pointer-events-none pr-[env(safe-area-inset-right)] pb-[env(safe-area-inset-bottom)]">
+        <div className="fixed bottom-4 right-4 md:bottom-12 md:right-12 z-[99] flex flex-col items-end gap-3 md:gap-4 pointer-events-none pr-[env(safe-area-inset-right)] pb-[env(safe-area-inset-bottom)]">
             {/* Tooltip / Message Bubble */}
             <AnimatePresence>
                 {showTooltip && (
@@ -79,20 +79,20 @@ export default function FloatingChatbot() {
                         className="relative flex items-center justify-center"
                     >
                         {/* Soft background glow */}
-                        <div className="absolute inset-0 rounded-full bg-blue-500/20 blur-2xl -z-10 group-hover:bg-blue-400/40 transition-colors duration-300"></div>
+                        <div className="absolute inset-0 rounded-full bg-blue-500/20 blur-xl md:blur-2xl -z-10 group-hover:bg-blue-400/40 transition-colors duration-300"></div>
 
-                        <div className="relative w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 flex items-center justify-center transition-transform group-hover:scale-105">
+                        <div className="relative w-12 h-12 sm:w-14 sm:h-14 md:w-20 md:h-20 flex items-center justify-center transition-transform group-hover:scale-105">
                             <Image
                                 src="/chatbot-icon.svg"
                                 alt="Chat with DigiBot - AI Digital Marketing Assistant"
                                 width={80}
                                 height={80}
-                                className="w-full h-full object-contain drop-shadow-[0_0_12px_rgba(0,240,255,0.4)] group-hover:drop-shadow-[0_0_20px_rgba(0,240,255,0.8)] transition-all z-10 relative"
+                                className="w-full h-full object-contain drop-shadow-[0_0_8px_rgba(0,240,255,0.4)] md:drop-shadow-[0_0_12px_rgba(0,240,255,0.4)] group-hover:drop-shadow-[0_0_20px_rgba(0,240,255,0.8)] transition-all z-10 relative"
                             />
                         </div>
 
                         {/* Status light */}
-                        <span className="absolute top-0 right-0 w-4 h-4 md:w-5 md:h-5 rounded-full bg-green-500 border-2 border-[#0B0B0B] shadow-[0_0_10px_rgba(34,197,94,0.6)] animate-pulse z-20"></span>
+                        <span className="absolute top-0 right-0 w-3 h-3 md:w-5 md:h-5 rounded-full bg-green-500 border-2 border-[#0B0B0B] shadow-[0_0_8px_rgba(34,197,94,0.6)] animate-pulse z-20"></span>
                     </motion.div>
                 </div>
             </motion.a>
