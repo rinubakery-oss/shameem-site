@@ -51,7 +51,7 @@ export default function Hero() {
             <div className="container mx-auto px-6 lg:px-12 text-center relative z-10">
                 <div className="max-w-4xl mx-auto">
                     <div className="inline-block mb-6 px-4 py-1.5 rounded-full border border-dark-border bg-dark-card text-neon-blue text-xs md:text-sm font-medium tracking-wide animate-hero-in hero-content-initial">
-                        Expert AI Digital Marketer in Malappuram
+                        Best Freelance Digital Marketing in Kottakkal, Malappuram
                     </div>
 
                     <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold leading-[1.1] md:leading-tight mb-6 tracking-tight animate-hero-in hero-content-initial stagger-1">
