@@ -55,7 +55,7 @@ export default function Hero() {
                     </div>
 
                     <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold leading-[1.1] md:leading-tight mb-6 tracking-tight animate-hero-in hero-content-initial stagger-1">
-                        Freelance Digital Marketing <br className="hidden md:block" />
+                        Best Freelance Digital Marketing <br className="hidden md:block" />
                         in <span className="text-gradient">Kottakkal</span>
                     </h1>
 
