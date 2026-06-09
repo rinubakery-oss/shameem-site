@@ -55,8 +55,8 @@ export default function Hero() {
                     </div>
 
                     <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold leading-[1.1] md:leading-tight mb-6 tracking-tight animate-hero-in hero-content-initial stagger-1">
-                        AI Digital Marketing Expert <br className="hidden md:block" />
-                        in <span className="text-gradient">Malappuram, Kerala</span>
+                        Freelance Digital Marketing <br className="hidden md:block" />
+                        in <span className="text-gradient">Kottakkal</span>
                     </h1>
 
                     <h2 className="text-lg md:text-2xl text-gray-400 mb-10 min-h-[5rem] md:min-h-0 font-light max-w-2xl mx-auto flex flex-col md:block items-center animate-hero-in hero-content-initial stagger-2">

@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 import { Award, Briefcase, GraduationCap, TrendingUp } from "lucide-react";
 import Image from "next/image";
