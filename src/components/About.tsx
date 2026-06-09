@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Award, Briefcase, GraduationCap, TrendingUp } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function About() {
     const stats = [
@@ -69,7 +70,7 @@ export default function About() {
                         </h3>
 
                         <p className="text-gray-400 text-base leading-relaxed text-justify">
-                            I hold a BA in Sociology from Sree Narayana Guru Open University and am currently advancing my skills through a comprehensive Digital Marketing program at <span className="text-white font-medium">Oxdu Media School in Kondotty</span>. This commitment to continuous learning ensures I stay ahead of the latest industry trends and tools, enabling me to consistently deliver high-impact, data-driven results for my clients.
+                            I hold a BA in Sociology from Sree Narayana Guru Open University and am currently advancing my skills through a comprehensive Digital Marketing program at <a href="https://www.oxdumedia.com" target="_blank" rel="noopener noreferrer" className="text-neon-blue hover:text-neon-blue-dark hover:underline transition-colors font-medium">Oxdu Media School in Kondotty</a>. This commitment to continuous learning ensures I stay ahead of the latest industry trends and tools, enabling me to consistently deliver high-impact, data-driven results for my clients. Feel free to <Link href="/#contact" className="text-neon-blue hover:text-neon-blue-dark hover:underline transition-colors font-medium">Contact Me</Link> to discuss how we can work together.
                         </p>
 
                         <p className="text-gray-400 text-base leading-relaxed text-justify">
