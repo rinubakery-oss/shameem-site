@@ -64,14 +64,10 @@ export default function Services() {
         <section id="services" className="py-24 relative" aria-labelledby="services-heading">
             <div className="container mx-auto px-6 lg:px-12">
                 <div className="text-center max-w-3xl mx-auto mb-16">
-                    <h2 id="services-heading" className="text-4xl font-bold mb-4 font-poppins">
-                        Premium <span className="text-gradient">Services</span>
+                    <h2 className="text-4xl font-bold text-white mb-8">
+                        Services
                     </h2>
                     <div className="h-1 w-20 bg-neon-blue mx-auto rounded-full mb-6" />
-                    <p className="text-lg text-gray-400">
-                        Powered by Artificial Intelligence, optimized for humans.
-                        Delivering the best digital marketing solutions in Kerala.
-                    </p>
                 </div>
 
                 <motion.div
