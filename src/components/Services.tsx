@@ -23,7 +23,7 @@ const services = [
     },
     {
         title: "Social Media Marketing",
-        description: "Engaging SMM campaigns that build brand loyalty and drive conversions.",
+        description: "I help you elevate your brand and increase sales through social media strategies. We will work together to build better relationships with clients through targeted campaigns.",
         icon: <Share2 size={32} className="text-neon-blue" />,
     },
     {
