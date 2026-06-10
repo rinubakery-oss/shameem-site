@@ -37,9 +37,9 @@ const services = [
         icon: <Search size={32} className="text-neon-blue" />,
     },
     {
-        title: "Content Marketing",
-        description: "Create high-value content that attracts, engages, and converts your target audience.",
-        icon: <PenTool size={32} className="text-neon-blue-dark" />,
+        title: "AI-Powered Marketing",
+        description: "I use the latest AI technology to automate your marketing, personalize customer journeys, and deliver data-driven results that grow your business faster.",
+        icon: <Bot size={32} className="text-neon-blue-dark" />,
     },
 ];
 
