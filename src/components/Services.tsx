@@ -18,7 +18,7 @@ const services = [
     },
     {
         title: "Web Development",
-        description: "Build fast, secure, and modern websites optimized for search engines and user experience.",
+        description: "I build fast, secure websites that fit your brand. I make this a reality using cutting-edge tools like WordPress and AntiGravity.",
         icon: <CodeXml size={32} className="text-neon-blue-dark" />,
     },
     {
