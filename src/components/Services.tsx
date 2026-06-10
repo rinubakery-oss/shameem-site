@@ -40,7 +40,7 @@ const services = [
     {
         title: "AI-Powered Marketing",
         description: "I use the latest AI technology to automate your marketing, personalize customer journeys, and deliver data-driven results that grow your business faster.",
-        icon: <Bot size={32} className="text-neon-blue-dark" />,
+        icon: <Bot size={32} className="text-neon-blue" />,
     },
 ];
 
