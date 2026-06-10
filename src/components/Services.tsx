@@ -28,7 +28,7 @@ const services = [
     },
     {
         title: "Google Ads",
-        description: "High-ROI PPC campaigns tailored to capture high-intent traffic instantly.",
+        description: "Drive instant results with high-intent traffic. I create and optimize Google Ads campaigns that target the right audience, maximize your ROI, and scale your business growth.",
         icon: <Megaphone size={32} className="text-neon-blue-dark" />,
     },
     {
