@@ -7,7 +7,8 @@ import {
     Share2,
     Megaphone,
     Search,
-    PenTool
+    PenTool,
+    Bot
 } from "lucide-react";
 
 const services = [
