@@ -33,7 +33,7 @@ const services = [
     },
     {
         title: "SEM",
-        description: "Target ready-to-buy customers with strategic paid search marketing campaigns.",
+        description: "Capture ready-to-buy customers through strategic search marketing. I manage data-driven SEM campaigns to ensure your brand appears at the top of search results exactly when needed.",
         icon: <Search size={32} className="text-neon-blue" />,
     },
     {
