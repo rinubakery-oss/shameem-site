@@ -11,10 +11,10 @@ const FAQSection = dynamic(() => import("@/components/FAQSection"));
 const CTASection = dynamic(() => import("@/components/CTASection"));
 const Contact = dynamic(() => import("@/components/Contact"));
 const Footer = dynamic(() => import("@/components/Footer"));
-
+const Certifications = dynamic(() => import("@/components/Certifications"));
 export default function Home() {
   return (
-    <main className="min-h-screen bg-dark-bg selection:bg-neon-blue/30 selection:text-white">
+    <main className="min-h-screen bg-dark-bg ...">
       <Navbar />
       <Hero />
       <About />
@@ -22,10 +22,9 @@ export default function Home() {
       <Portfolio />
       <WhyChooseMe />
       <Testimonials />
+      <Certifications /> {/* Ithupole cherkkuka */}
       <FAQSection />
       <CTASection />
       <Contact />
       <Footer />
     </main>
-  );
-}
