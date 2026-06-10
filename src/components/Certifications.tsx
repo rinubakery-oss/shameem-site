@@ -21,7 +21,10 @@ export default function Certifications() {
                     {certs.map((cert, index) => (
                         <motion.div
                             key={index}
-                            variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
+                            variants={{
+                                hidden: { opacity: 0, y: 20 },
+                                visible: { opacity: 1, y: 0 }
+                            }}
                             className="p-8 rounded-3xl border border-gray-800 bg-gray-900"
                         >
                             <h3 className="text-xl font-bold mb-2">{cert.title}</h3>
@@ -32,3 +35,4 @@ export default function Certifications() {
             </div>
         </section>
     );
+}
