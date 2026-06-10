@@ -13,7 +13,7 @@ import {
 const services = [
     {
         title: "SEO Optimization",
-        description: "Future-proof your rankings with AI-driven content and technical SEO strategies.",
+        description: "I help your website rank higher on Google by SEO your main keyword, increase organic traffic, and convert visitors into loyal customers.",
         icon: <BrainCircuit size={32} className="text-neon-blue" />,
     },
     {
