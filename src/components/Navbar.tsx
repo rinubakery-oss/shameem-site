@@ -51,12 +51,6 @@ export default function Navbar() {
                             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-neon-blue transition-all duration-300 group-hover:w-full"></span>
                         </Link>
                     ))}
-                    <Link
-                        href="/#contact"
-                        className="bg-neon-blue hover:bg-neon-blue-dark active:scale-95 text-dark-bg px-6 py-2.5 rounded-full font-bold transition-all duration-300 hover:scale-105 shadow-[0_0_20px_rgba(0,240,255,0.4)] hover:shadow-[0_0_30px_rgba(0,240,255,0.7)]"
-                    >
-                        Let&apos;s Talk
-                    </Link>
                 </div>
 
                 {/* Mobile menu button */}
