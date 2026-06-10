@@ -2,44 +2,44 @@
 
 import { motion } from "framer-motion";
 import {
-    Bot,
+    BrainCircuit,
+    CodeXml,
     Share2,
-    MousePointerClick,
+    Megaphone,
     Search,
-    MapPin,
-    Users
+    PenTool
 } from "lucide-react";
 
 const services = [
     {
         title: "AI SEO Optimization",
         description: "Future-proof your rankings with AI-driven content and technical SEO strategies.",
-        icon: <Bot size={32} className="text-neon-blue" />,
+        icon: <BrainCircuit size={32} className="text-neon-blue" />,
+    },
+    {
+        title: "Web Development",
+        description: "Build fast, secure, and modern websites optimized for search engines and user experience.",
+        icon: <CodeXml size={32} className="text-neon-blue-dark" />,
     },
     {
         title: "Social Media Marketing",
         description: "Engaging SMM campaigns that build brand loyalty and drive conversions.",
-        icon: <Share2 size={32} className="text-neon-blue-dark" />,
+        icon: <Share2 size={32} className="text-neon-blue" />,
     },
     {
-        title: "Google Ads / SEM",
+        title: "Google Ads",
         description: "High-ROI PPC campaigns tailored to capture high-intent traffic instantly.",
-        icon: <MousePointerClick size={32} className="text-neon-blue" />,
+        icon: <Megaphone size={32} className="text-neon-blue-dark" />,
     },
     {
-        title: "Website SEO Optimization",
-        description: "Comprehensive audits and on-page tweaks to rank #1 on Google.",
-        icon: <Search size={32} className="text-neon-blue-dark" />,
+        title: "SEM",
+        description: "Target ready-to-buy customers with strategic paid search marketing campaigns.",
+        icon: <Search size={32} className="text-neon-blue" />,
     },
     {
-        title: "Local Business Marketing",
-        description: "Dominate the Malappuram & Kerala market with optimized Google Business Profiles.",
-        icon: <MapPin size={32} className="text-neon-blue" />,
-    },
-    {
-        title: "Lead Generation Campaigns",
-        description: "End-to-end funnels designed to capture and nurture qualified business leads.",
-        icon: <Users size={32} className="text-neon-blue-dark" />,
+        title: "Content Marketing",
+        description: "Create high-value content that attracts, engages, and converts your target audience.",
+        icon: <PenTool size={32} className="text-neon-blue-dark" />,
     },
 ];
 
