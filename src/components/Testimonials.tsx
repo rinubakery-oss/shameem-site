@@ -5,9 +5,9 @@ import { Star, Quote } from "lucide-react";
 
 const testimonials = [
     {
-        name: "Rahul M.",
-        role: "CEO, Kerala Clinic",
-        content: "Shameem completely turned around our digital presence. Within 3 months of his SEO and targeted Google Ads campaign, our patient walk-ins increased by 40%. Highly recommend his AI-driven approach.",
+        name: "Ahmadluthu kannur",
+        role: "marketing head",
+        content: "Shameem completely turned around our digital presence. Within 3 months of his SEO and targeted Google Ads campaign, our patient walk-ins increased by 40%. Highly recommend him as the best freelance digital marketer in Kottakkal.",
         rating: 5,
     },
     {

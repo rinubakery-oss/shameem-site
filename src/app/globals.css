@@ -1,15 +1,18 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: var(--font-inter), sans-serif;
-  --font-poppins: var(--font-poppins), sans-serif;
-  --color-neon-blue: #00f0ff;
-  --color-neon-blue-dark: #0088ff;
-  --color-dark-bg: #05050f;
-  --color-dark-card: rgba(15, 15, 25, 0.4);
-  --color-dark-border: rgba(255, 255, 255, 0.08);
-  --color-gray-100: #ededed;
-  --color-gray-400: #9ca3af;
+  --font-sans: var(--font-sans), sans-serif;
+  
+  /* Electric Violet / Indigo Theme - highly premium */
+  --color-neon-blue: #8b5cf6;       /* Violet 500 */
+  --color-neon-blue-dark: #6366f1;  /* Indigo 500 */
+  
+  /* Premium Dark OLED backgrounds */
+  --color-dark-bg: #030305;
+  --color-dark-card: rgba(10, 10, 15, 0.5);
+  --color-dark-border: rgba(255, 255, 255, 0.05);
+  --color-gray-100: #f8fafc;
+  --color-gray-400: #94a3b8;
 }
 
 :root {
@@ -32,13 +35,10 @@ body {
   width: 100%;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-poppins);
+/* Ensure headings inherit the sleek, tracking-tight sans-serif font */
+h1, h2, h3, h4, h5, h6 {
+  font-family: inherit;
+  letter-spacing: -0.02em;
 }
 
 /* Glassmorphism Utilities */

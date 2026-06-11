@@ -1,19 +1,12 @@
 import type { Metadata } from "next";
-import { Inter, Poppins } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import dynamic from "next/dynamic";
 import Script from "next/script";
 const FloatingChatbot = dynamic(() => import("@/components/FloatingChatbot"));
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  display: "swap", // Ensure text is visible during font load
-});
-
-const poppins = Poppins({
-  variable: "--font-poppins",
-  weight: ["400", "600", "700"],
+const jakarta = Plus_Jakarta_Sans({
+  variable: "--font-sans",
   subsets: ["latin"],
   display: "swap",
 });
@@ -92,7 +85,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark scroll-smooth">
       <body
-        className={`${inter.variable} ${poppins.variable} antialiased bg-dark-bg text-gray-100 font-sans relative`}
+        className={`${jakarta.variable} antialiased bg-dark-bg text-gray-100 font-sans relative tracking-tight`}
         suppressHydrationWarning
       >
         {/* Google tag (gtag.js) */}

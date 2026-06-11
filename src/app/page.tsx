@@ -6,6 +6,7 @@ const About = dynamic(() => import("@/components/About"));
 const Services = dynamic(() => import("@/components/Services"));
 const Portfolio = dynamic(() => import("@/components/Portfolio"));
 const WhyChooseMe = dynamic(() => import("@/components/WhyChooseMe"));
+const Certifications = dynamic(() => import("@/components/Certifications"));
 const Testimonials = dynamic(() => import("@/components/Testimonials"));
 const FAQSection = dynamic(() => import("@/components/FAQSection"));
 const CTASection = dynamic(() => import("@/components/CTASection"));
@@ -21,6 +22,7 @@ export default function Home() {
       <Services />
       <Portfolio />
       <WhyChooseMe />
+      <Certifications />
       <Testimonials />
       <FAQSection />
       <CTASection />
