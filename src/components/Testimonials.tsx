@@ -5,21 +5,21 @@ import { Star, Quote } from "lucide-react";
 
 const testimonials = [
     {
-        name: "Ahmadluthu kannur",
-        role: "marketing head",
+        name: "Ahmadluthu Kannur",
+        role: "Marketing Head",
         content: "Shameem completely turned around our digital presence. Within 3 months of his SEO and targeted Google Ads campaign, our patient walk-ins increased by 40%. Highly recommend him as the best freelance digital marketer in Kottakkal.",
         rating: 5,
     },
     {
-        name: "Fathima S.",
-        role: "E-Commerce Founder",
-        content: "We were struggling to get ROI on Facebook Ads. Shameem restructured our entire funnel and social media strategy. The results speak for themselves—we hit consistent 4x ROAS!",
+        name: "Sinanmc Athavanad.",
+        role: "Web Developer",
+        content: "Shameem is not just a marketer; he is a growth partner. After struggling with low conversions on Facebook ads, his data-driven strategy and funnel reorganization completely turned things around. The impact on our bottom line has been incredible.",
         rating: 5,
     },
     {
-        name: "Arun K.",
-        role: "Local Business Owner, Malappuram",
-        content: "Finding a genuine AI digital marketing expert in Malappuram, Kerala was tough until we met Shameem. He handles our local SEO perfectly; we rank #1 on Google Maps for our main services now.",
+        name: "Sabith Calicut",
+        role: "Digital Marketing Trainer",
+        content: "Working with Shameem was a game-changer for our brand. He has an exceptional eye for optimising funnels, and his knowledge of the digital landscape is impressive. He didn't just manage our ads; he rebuilt our strategy from the ground up. Best freelance digital marketing in Kottakkal, Malappuram. If you want measurable growth, he is the person to hire..",
         rating: 5,
     }
 ];
