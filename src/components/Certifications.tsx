@@ -27,7 +27,7 @@ const certs: Certification[] = [
     {
         title: "MSK Digital Making",
         issuer: "HP LIFE online",
-        description: "Developing critical thinking skills to evaluate AI-generated content, identify biases, and ensure data integrity in an AI-driven digital landscape."
+        description: "Developing critical thinking skills to evaluate AI-generated content, identify biases, and ensure data integrity in an AI-driven digital landscape.",
         image: "/certificate-3.webp"
     }
 ];
