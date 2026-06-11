@@ -13,21 +13,21 @@ interface Certification {
 
 const certs: Certification[] = [
     {
-        title: "Google Ads Search Certification",
-        issuer: "Google",
-        description: "Validates proficiency in designing, managing, and optimizing Google Search campaigns to drive conversions and maximize ROI.",
+        title: "HTML, CSS for freshers",
+        issuer: "codecademy",
+        description: "Validates proficiency in designing, managing, and optimizing Google Search campaigns to drive conversions and maximize ROI.Building a solid foundation in web development with HTML and CSS. This certification validates the ability to create responsive, semantic, and modern website structures from scratch.",
         image: "/certificate-1.webp"
     },
     {
-        title: "Meta Certified Digital Marketing Associate",
-        issuer: "Meta",
-        description: "Confirms technical expertise in creating, targeting, and analyzing paid advertising campaigns across Meta ecosystems.",
+        title: "ChatGPT and Generative AI Business",
+        issuer: "Google",
+        description: "Leveraging advanced Generative AI and ChatGPT to streamline business operations, automate content strategy, and drive data-backed marketing growth.",
         image: "/certificate-2.webp"
     },
     {
-        title: "Inbound Marketing Certification",
-        issuer: "HubSpot Academy",
-        description: "Covers the core methodologies of inbound strategy, content marketing, lead generation, and nurturing systems.",
+        title: "MSK Digital Making",
+        issuer: "HP LIFE online",
+        description: "Developing critical thinking skills to evaluate AI-generated content, identify biases, and ensure data integrity in an AI-driven digital landscape."
         image: "/certificate-3.webp"
     }
 ];
@@ -83,18 +83,17 @@ export default function Certifications() {
                         <motion.article
                             key={i}
                             variants={itemVariants}
-                            className={`group relative overflow-hidden rounded-[2rem] border border-dark-border hover:border-neon-blue/50 transition-colors duration-500 bg-dark-card ${
-                                i === 0 ? "md:col-span-2 aspect-[4/3] md:aspect-[21/9]" : "aspect-[4/3]"
-                            }`}
+                            className={`group relative overflow-hidden rounded-[2rem] border border-dark-border hover:border-neon-blue/50 transition-colors duration-500 bg-dark-card ${i === 0 ? "md:col-span-2 aspect-[4/3] md:aspect-[21/9]" : "aspect-[4/3]"
+                                }`}
                         >
                             {/* Background Image */}
-                            <Image 
-                                src={cert.image} 
-                                alt={cert.title} 
-                                fill 
+                            <Image
+                                src={cert.image}
+                                alt={cert.title}
+                                fill
                                 className="object-cover z-0 group-hover:scale-105 group-hover:rotate-1 transition-all duration-700 ease-out"
                             />
-                            
+
                             {/* Hover Overlay Gradient */}
                             <div className="absolute inset-0 bg-gradient-to-t from-[#05050f] via-[#05050f]/60 to-transparent z-10 opacity-80 group-hover:opacity-95 transition-opacity duration-500" />
 
@@ -109,12 +108,11 @@ export default function Certifications() {
                                             <ExternalLink size={18} className="text-white" />
                                         </div>
                                     </div>
-                                    <h3 className={`font-bold text-white font-poppins mb-3 leading-snug group-hover:text-neon-blue transition-colors duration-300 ${
-                                        i === 0 ? "text-3xl md:text-4xl max-w-2xl" : "text-2xl"
-                                    }`}>
+                                    <h3 className={`font-bold text-white font-poppins mb-3 leading-snug group-hover:text-neon-blue transition-colors duration-300 ${i === 0 ? "text-3xl md:text-4xl max-w-2xl" : "text-2xl"
+                                        }`}>
                                         {cert.title}
                                     </h3>
-                                    
+
                                     <div className="overflow-hidden max-h-0 group-hover:max-h-[150px] opacity-0 group-hover:opacity-100 transition-all duration-500 delay-100 ease-[0.16,1,0.3,1]">
                                         <p className="text-gray-300 text-sm md:text-base leading-relaxed max-w-xl">
                                             {cert.description}
