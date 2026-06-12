@@ -23,15 +23,15 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Shameem" }],
   openGraph: {
-    title: "AI Digital Marketing Expert in Malappuram, Kerala | Shameem Digital Marketing",
-    description: "AI digital marketing expert in Malappuram, Kerala helping businesses grow using SEO, SMM, and Google Ads strategies.",
+    title: "Best freelance Digital Marketing in Kottakkal Malappuram, Kerala | Shameem Digital Marketing",
+    description: "Best freelance Digital Marketing in Kottakkal Malappuram, Kerala helping businesses grow using SEO, SMM, and Google Ads strategies.",
     url: "https://mhdshameem.in",
     images: [
       {
-        url: "/ai-digital-marketing-expert-malappuram-kerala.webp",
+        url: "/digital-marketing-expert-malappuram-kerala.webp",
         width: 1200,
         height: 630,
-        alt: "AI Digital Marketing Expert in Malappuram, Kerala - Shameem",
+        alt: "Digital Marketing Expert in Malappuram, Kerala - Shameem",
       },
     ],
     siteName: "Shameem Digital Marketing",
@@ -40,9 +40,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Digital Marketing Expert in Malappuram, Kerala | Shameem Digital Marketing",
-    description: "AI digital marketing expert in Malappuram, Kerala helping businesses grow using SEO, SMM, and Google Ads strategies.",
-    images: ["/ai-digital-marketing-expert-malappuram-kerala.webp"],
+    title: "Best freelance Digital Marketing in Malappuram, Kerala | Shameem Digital Marketing",
+    description: "Best freelance digital marketing in Malappuram, Kerala helping businesses grow using SEO, SMM, and Google Ads strategies.",
+    images: ["/digital-marketing-expert-malappuram-kerala.webp"],
   },
   icons: {
     icon: [
@@ -73,7 +73,7 @@ export default function RootLayout({
     jobTitle: "AI Digital Marketing Expert",
     url: "https://mhdshameem.in",
     image: "https://mhdshameem.in/chatbot-icon.svg",
-    description: "AI digital marketing expert in Malappuram, Kerala helping businesses grow using SEO, SMM, and Google Ads strategies.",
+    description: "best freelance digital marketing in Malappuram, Kerala helping businesses grow using SEO, SMM, and Google Ads strategies.",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Malappuram",
