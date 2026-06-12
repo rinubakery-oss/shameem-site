@@ -13,13 +13,13 @@ const jakarta = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://mhdshameem.in"),
-  title: "Best freelance Digital Marketing in Kottakkal Malappuram | Shameem Digital Marketing",
-  description: "Best freelance digital marketing in kottakkal malappuram, Kerala helping businesses grow using SEO, SMM, and Google Ads strategies.",
+  title: "Best freelance Digital Marketing in Kottakkal | Shameem Digital Marketing",
+  description: "Best freelance digital marketing in kottakkal Malappuram , Kerala helping businesses grow using SEO, SMM, and Google Ads strategies.",
   keywords: [
-    "AI digital marketing expert in Malappuram, Kerala",
-    "AI digital marketing expert in Kerala",
-    "freelance digital marketer in Malappuram",
-    "SEO expert Malappuram"
+    "best freelance digital marketing service in Malappuram",
+    "best freelance digital marketing expert in kottakkal Malappuram",
+    "best ai digital marketing expert in Malappuram",
+    "best SEO expert in Malappuram kerala",
   ],
   authors: [{ name: "Shameem" }],
   openGraph: {
