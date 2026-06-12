@@ -13,8 +13,8 @@ const jakarta = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://mhdshameem.in"),
-  title: "AI Digital Marketing Expert in Malappuram, Kerala | Shameem Digital Marketing",
-  description: "AI digital marketing expert in Malappuram, Kerala helping businesses grow using SEO, SMM, and Google Ads strategies.",
+  title: "Best freelance Digital Marketing in Kottakkal Malappuram | Shameem Digital Marketing",
+  description: "Best freelance digital marketing in kottakkal malappuram, Kerala helping businesses grow using SEO, SMM, and Google Ads strategies.",
   keywords: [
     "AI digital marketing expert in Malappuram, Kerala",
     "AI digital marketing expert in Kerala",
@@ -89,13 +89,13 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         {/* Google tag (gtag.js) */}
-        <Script src="https://www.googletagmanager.com/gtag/js?id=G-PN21DYQ1YK" strategy="afterInteractive" />
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-0LLLYW2XTJ" strategy="afterInteractive" />
         <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-PN21DYQ1YK');
+            gtag('config', 'G-0LLLYW2XTJ');
           `}
         </Script>
         <script
