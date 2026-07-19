@@ -38,9 +38,9 @@ const services = [
         icon: <Search size={32} className="text-neon-blue" />,
     },
     {
-        title: "AI-Powered Marketing",
-        description: "I use the latest AI technology to automate your marketing, personalize customer journeys, and deliver data-driven results that grow your business faster.",
-        icon: <Bot size={32} className="text-neon-blue" />,
+        title: "Multilingual Typing Expert",
+        description: "Fast and free typing services in Arabic, Malayalam, and English. I ensure high accuracy and quick turnaround times for all your document formatting and data entry needs.",
+        icon: <Keyboard size={32} className="text-neon-blue" />
     },
 ];
 
