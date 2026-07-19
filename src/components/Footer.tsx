@@ -12,7 +12,7 @@ export default function Footer() {
                 <div className="grid md:grid-cols-3 gap-12 mb-12">
 
                     <div className="space-y-4">
-                        <Link href="/#home" aria-label="Return to Home" className="text-2xl font-bold font-poppins text-gray-100 tracking-tight block">
+                        <Link href="/#home" aria-label="Shameem - Return to Home" className="text-2xl font-bold font-poppins text-gray-100 tracking-tight block">
                             Shameem<span className="text-neon-blue">.</span>
                         </Link>
                         <p className="text-gray-400 max-w-sm">

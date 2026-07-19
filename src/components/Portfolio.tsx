@@ -39,7 +39,7 @@ export default function Portfolio() {
                             Transforming businesses with data-backed strategies. Here&apos;s a glimpse of recent successes.
                         </p>
                     </div>
-                    <Link href="/#portfolio" aria-label="View all portfolio work details" className="px-6 py-3 rounded-full border border-dark-border text-gray-100 font-medium hover:bg-white/5 transition-colors flex items-center gap-2 group hover:border-neon-blue/50">
+                    <Link href="/#portfolio" aria-label="View All Work - portfolio details" className="px-6 py-3 rounded-full border border-dark-border text-gray-100 font-medium hover:bg-white/5 transition-colors flex items-center gap-2 group hover:border-neon-blue/50">
                         View All Work <ArrowUpRight size={18} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                     </Link>
                 </div>

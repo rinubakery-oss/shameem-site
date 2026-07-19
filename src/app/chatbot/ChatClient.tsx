@@ -317,6 +317,7 @@ export default function ChatClient() {
                         <button
                             type="submit"
                             disabled={isLoading || leadStep === 5 || !input.trim()}
+                            aria-label="Send message"
                             className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white p-3.5 md:p-4 rounded-full transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-[0_0_15px_rgba(37,99,235,0.4)] flex-shrink-0"
                         >
                             <Send className="w-4 h-4 md:w-5 md:h-5 ml-0.5" />

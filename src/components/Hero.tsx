@@ -70,7 +70,7 @@ export default function Hero() {
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4 px-4 sm:px-0 animate-hero-in hero-content-initial stagger-3">
                         <Link
                             href="/#contact"
-                            aria-label="Contact Shameem for AI Digital Marketing Services"
+                            aria-label="Contact Now for AI Digital Marketing Services"
                             className="w-full sm:w-auto px-8 py-4 rounded-full bg-neon-blue text-dark-bg font-bold text-lg flex items-center justify-center gap-2 hover:bg-neon-blue-dark transition-all duration-300 hover:scale-105 shadow-[0_0_20px_rgba(0,240,255,0.4)] hover:shadow-[0_0_40px_rgba(0,240,255,0.7)] active:scale-95 group"
                         >
                             Contact Now <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
@@ -80,7 +80,7 @@ export default function Hero() {
                             href="https://wa.me/918921752709"
                             target="_blank"
                             rel="noopener noreferrer"
-                            aria-label="Message Shameem on WhatsApp for a Free Marketing Consultation"
+                            aria-label="Free Consultation - Message Shameem on WhatsApp"
                             className="w-full sm:w-auto px-8 py-4 rounded-full border border-dark-border bg-dark-card/50 backdrop-blur-sm hover:bg-dark-border text-gray-100 font-bold text-lg flex items-center justify-center gap-2 transition-all duration-300 hover:scale-105 hover:border-neon-blue/50 shadow-[0_0_15px_rgba(0,0,0,0.5)] active:scale-95 group"
                         >
                             <MessageCircle size={22} className="text-green-400 group-hover:scale-110 transition-transform" /> Free Consultation

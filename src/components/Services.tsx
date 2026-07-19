@@ -8,7 +8,8 @@ import {
     Megaphone,
     Search,
     PenTool,
-    Bot
+    Bot,
+    Keyboard
 } from "lucide-react";
 
 const services = [
